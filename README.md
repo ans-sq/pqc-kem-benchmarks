@@ -1,5 +1,7 @@
 # Artifact: Post-Quantum Key Establishment After Standardization
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21855913.svg)](https://doi.org/10.5281/zenodo.21855913)
+
 Benchmark scripts, raw measurement data, and analysis code for the paper:
 
 > A. Sohail, "Post-Quantum Key Establishment After Standardization: An
@@ -103,5 +105,8 @@ Python dependencies: `pip install -r requirements.txt`.
 ## Citing
 
 If you use this artifact, please cite the paper above; see
-`CITATION.cff` for machine-readable metadata. An archived, DOI-carrying
-snapshot of each release is deposited on Zenodo.
+`CITATION.cff` for machine-readable metadata. Each release is archived
+on Zenodo: [10.5281/zenodo.21855913](https://doi.org/10.5281/zenodo.21855913)
+resolves to the latest version; the release used for the paper's
+submitted numbers is v1.0.0
+([10.5281/zenodo.21855914](https://doi.org/10.5281/zenodo.21855914)).

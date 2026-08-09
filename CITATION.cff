@@ -16,6 +16,14 @@ authors:
 version: 1.0.0
 date-released: "2026-08-09"
 license: MIT
+doi: 10.5281/zenodo.21855914
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21855913
+    description: Concept DOI resolving to the latest archived version
+  - type: doi
+    value: 10.5281/zenodo.21855914
+    description: Version DOI for release v1.0.0
 repository-code: "https://github.com/ans-sq/pqc-kem-benchmarks"
 keywords:
   - post-quantum cryptography

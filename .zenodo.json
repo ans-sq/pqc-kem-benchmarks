@@ -1,0 +1,25 @@
+{
+  "title": "Artifact: Post-Quantum Key Establishment After Standardization — benchmark scripts and raw measurement data",
+  "upload_type": "software",
+  "description": "Benchmark scripts, raw measurement data, and analysis code for the paper \"Post-Quantum Key Establishment After Standardization: An Experimental Comparison of ML-KEM, NTRU, HQC, and Classic McEliece\" (A. Sohail, 2026). Includes liboqs CPU benchmarks on x86-64 and ARM, transport-level latency and packet-loss experiments for ephemeral KEM key exchange, real-WAN validation, complete TLS 1.3 and QUIC handshake measurements with the Open Quantum Safe provider, RAPL energy and massif memory profiles, statistical analysis with bootstrap confidence intervals, and the entropy-weighted TOPSIS selection framework. Code is MIT-licensed; measurement data is CC BY 4.0.",
+  "creators": [
+    {
+      "name": "Sohail, Ans",
+      "orcid": "0009-0002-5880-0644",
+      "affiliation": "University of Central Punjab, Lahore, Pakistan"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "post-quantum cryptography",
+    "key-encapsulation mechanism",
+    "ML-KEM",
+    "NTRU",
+    "HQC",
+    "Classic McEliece",
+    "TLS 1.3",
+    "side-channel attacks",
+    "benchmarking",
+    "NIST standardization"
+  ]
+}

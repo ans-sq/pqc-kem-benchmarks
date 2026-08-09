@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pem
+key
+key.pub
+liboqs/
+oqs-provider/
+install/
+hqc-official/
+openssl-*/
+*-build/
+*.log
+*.err

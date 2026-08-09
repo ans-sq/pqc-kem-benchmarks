@@ -1,0 +1,21 @@
+=== HQC-1 (official AVX2) ===
+
+--- HQC KEM Benchmark ---
+Keygen : 50650 cycles, 0.02 ms 
+Encaps : 96568 cycles, 0.04 ms 
+Decaps : 220441 cycles, 0.08 ms 
+
+=== HQC-3 (official AVX2) ===
+
+--- HQC KEM Benchmark ---
+Keygen : 126276 cycles, 0.05 ms 
+Encaps : 235856 cycles, 0.09 ms 
+Decaps : 469526 cycles, 0.18 ms 
+
+=== HQC-5 (official AVX2) ===
+
+--- HQC KEM Benchmark ---
+Keygen : 261365 cycles, 0.10 ms 
+Encaps : 488131 cycles, 0.19 ms 
+Decaps : 937678 cycles, 0.36 ms 
+

@@ -1,0 +1,223 @@
+{
+ "ML-KEM-512": {
+  "keygen": {
+   "us": 7.087,
+   "cycles": 18458,
+   "iters": 705566
+  },
+  "encaps": {
+   "us": 7.947,
+   "cycles": 20705,
+   "iters": 629143
+  },
+  "decaps": {
+   "us": 9.325,
+   "cycles": 24302,
+   "iters": 536183
+  }
+ },
+ "ML-KEM-768": {
+  "keygen": {
+   "us": 11.479,
+   "cycles": 29918,
+   "iters": 435590
+  },
+  "encaps": {
+   "us": 12.136,
+   "cycles": 31632,
+   "iters": 412006
+  },
+  "decaps": {
+   "us": 14.484,
+   "cycles": 37765,
+   "iters": 345215
+  }
+ },
+ "ML-KEM-1024": {
+  "keygen": {
+   "us": 15.893,
+   "cycles": 41445,
+   "iters": 314613
+  },
+  "encaps": {
+   "us": 16.884,
+   "cycles": 44033,
+   "iters": 296133
+  },
+  "decaps": {
+   "us": 20.714,
+   "cycles": 54032,
+   "iters": 241383
+  }
+ },
+ "NTRU-HPS-2048-677": {
+  "keygen": {
+   "us": 55.766,
+   "cycles": 145563,
+   "iters": 89661
+  },
+  "encaps": {
+   "us": 7.921,
+   "cycles": 20621,
+   "iters": 631252
+  },
+  "decaps": {
+   "us": 11.48,
+   "cycles": 29905,
+   "iters": 435544
+  }
+ },
+ "NTRU-HRSS-701": {
+  "keygen": {
+   "us": 54.892,
+   "cycles": 143277,
+   "iters": 91088
+  },
+  "encaps": {
+   "us": 6.094,
+   "cycles": 15856,
+   "iters": 820490
+  },
+  "decaps": {
+   "us": 12.224,
+   "cycles": 31843,
+   "iters": 409040
+  }
+ },
+ "NTRU-HPS-4096-821": {
+  "keygen": {
+   "us": 80.801,
+   "cycles": 210932,
+   "iters": 61881
+  },
+  "encaps": {
+   "us": 8.76,
+   "cycles": 22801,
+   "iters": 570750
+  },
+  "decaps": {
+   "us": 15.038,
+   "cycles": 39181,
+   "iters": 332498
+  }
+ },
+ "sntrup761": {
+  "keygen": {
+   "us": 4488.842,
+   "cycles": 11721054,
+   "iters": 1114
+  },
+  "encaps": {
+   "us": 79.451,
+   "cycles": 207372,
+   "iters": 62932
+  },
+  "decaps": {
+   "us": 161.08,
+   "cycles": 420518,
+   "iters": 31041
+  }
+ },
+ "HQC-128": {
+  "keygen": {
+   "us": 5181.72,
+   "cycles": 13530262,
+   "iters": 965
+  },
+  "encaps": {
+   "us": 10410.811,
+   "cycles": 27184295,
+   "iters": 481
+  },
+  "decaps": {
+   "us": 16710.047,
+   "cycles": 43632724,
+   "iters": 300
+  }
+ },
+ "HQC-192": {
+  "keygen": {
+   "us": 15439.957,
+   "cycles": 40316365,
+   "iters": 324
+  },
+  "encaps": {
+   "us": 30929.389,
+   "cycles": 80761917,
+   "iters": 162
+  },
+  "decaps": {
+   "us": 48204.673,
+   "cycles": 125870861,
+   "iters": 104
+  }
+ },
+ "HQC-256": {
+  "keygen": {
+   "us": 28876.374,
+   "cycles": 75401226,
+   "iters": 174
+  },
+  "encaps": {
+   "us": 58559.174,
+   "cycles": 152908176,
+   "iters": 86
+  },
+  "decaps": {
+   "us": 91105.709,
+   "cycles": 237893152,
+   "iters": 55
+  }
+ },
+ "Classic-McEliece-348864": {
+  "keygen": {
+   "us": 33009.539,
+   "cycles": 86193550,
+   "iters": 152
+  },
+  "encaps": {
+   "us": 12.485,
+   "cycles": 32525,
+   "iters": 400471
+  },
+  "decaps": {
+   "us": 124.977,
+   "cycles": 326262,
+   "iters": 40008
+  }
+ },
+ "Classic-McEliece-460896": {
+  "keygen": {
+   "us": 92791.963,
+   "cycles": 242296584,
+   "iters": 54
+  },
+  "encaps": {
+   "us": 27.344,
+   "cycles": 71315,
+   "iters": 182854
+  },
+  "decaps": {
+   "us": 171.432,
+   "cycles": 447552,
+   "iters": 29167
+  }
+ },
+ "Classic-McEliece-8192128": {
+  "keygen": {
+   "us": 194556.962,
+   "cycles": 508023760,
+   "iters": 26
+  },
+  "encaps": {
+   "us": 46.649,
+   "cycles": 121672,
+   "iters": 107184
+  },
+  "decaps": {
+   "us": 180.879,
+   "cycles": 472230,
+   "iters": 27643
+  }
+ }
+}

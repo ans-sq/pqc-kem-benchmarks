@@ -5,9 +5,12 @@ set -u
 cd "$(dirname "$0")/.."
 D=data; A=$D/analysis; P=$D/pcapsum
 mkdir -p $A $P
-PY=python3
-MPL=~/.pyenv/versions/3.12.12/bin/python3   # interpreter with matplotlib (figures)
-run() { taskset -c 4-11 "$@"; }
+PY=${PY:-python3}
+MPL=${MPL:-$PY}                    # interpreter with matplotlib (figures)
+FIG=${FIG:-$A/figures}             # the manuscript build sets FIG to its figures directory
+mkdir -p "$FIG"
+# keep the analysis off the measurement cores when the machine has them
+run() { if [ "$(nproc)" -ge 12 ]; then taskset -c 4-11 "$@"; else "$@"; fi; }
 
 run $PY -I analysis/cpu_analysis.py $D > $A/cpu.txt
 run $PY -I analysis/mcdm_v2.py $D > $A/mcdm_v2.txt
@@ -56,9 +59,11 @@ for r in frankfurt iowa mumbai; do
     done
   fi
 done
-run $MPL analysis/make_figures_v2.py $D /home/anss/random/paper_v2/figures
+run $MPL analysis/make_figures_v2.py $D "$FIG"
 
 run $PY -I analysis/wan_stats.py $D > $A/wan_protocols.csv
+# equivalence decisions under visit resampling, and margin sensitivity
+run $PY -I analysis/equiv_robustness.py $D > $A/equiv_robustness.csv
 # cross-platform replication (data/xplat/{amd,arm}/data, from xplat/provision.sh fetch)
 [ -d $D/xplat ] && run $PY -I analysis/xplat_analysis.py $D > $A/xplat.txt
 echo "analysis written to $A"

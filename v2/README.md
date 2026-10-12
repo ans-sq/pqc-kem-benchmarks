@@ -84,6 +84,24 @@ grep -rl /home/anss/random/bench/v2 . | xargs sed -i "s|/home/anss/random/bench/
 Packet traces are stored as `data/pcap/*.pcap.xz` and `data/wan/*.pcap.xz`;
 decompress them with `unxz -k` before running `analysis/analyze_all.sh`.
 
+The analysis needs Python 3.10 or later with numpy, scipy, and matplotlib
+(`pip install -r ../requirements.txt`). It writes summaries to
+`data/analysis/`, trace summaries to `data/pcapsum/`, and figures to
+`data/analysis/figures/` (set `FIG=<dir>` to change this, and `MPL=<python>`
+if matplotlib lives in another interpreter). It takes about two minutes.
+
+Clean-room check (12 October 2026): the v2.1.0 archive downloaded from
+Zenodo, unpacked into an empty directory, with the path rewrite above and a
+fresh virtual environment (numpy 2.5.4, scipy 1.18.1, matplotlib 3.11.2,
+newer than the versions used for the paper), regenerated all 19 analysis
+outputs and all 23 trace summaries byte-identical to the archived ones.
+Version 2.2.0 removed the three machine-specific settings that check had to
+patch by hand (the matplotlib interpreter, the figure directory, and a core
+list that assumed at least 12 cores) and added `analysis/equiv_robustness.py`
+(equivalence decisions under visit resampling, and margin sensitivity) and
+two correlation tests in `analysis/mcdm_v2.py` (the correlated criteria kept
+as a single member, and CRITIC weights).
+
 ## Licence
 
 Code MIT; data CC BY 4.0.

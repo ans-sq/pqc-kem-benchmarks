@@ -141,6 +141,16 @@ def entropy_w(X):
     return d / d.sum()
 
 
+def critic_w(X, cost):
+    """CRITIC weights: standard deviation of the min-max scores (benefit
+    direction) times the summed conflict 1 - r with the other criteria, so
+    that strongly correlated criteria share rather than multiply weight."""
+    R = normalize(X, cost, "minmax")
+    R[:, cost] = 1 - R[:, cost]
+    c = R.std(0, ddof=1) * (1 - np.corrcoef(R, rowvar=False)).sum(0)
+    return c / c.sum()
+
+
 def ranks(s):
     r = np.empty(len(s), int)
     r[np.argsort(-s)] = np.arange(1, len(s) + 1)
@@ -257,6 +267,33 @@ def main():
             loo[CRIT[j]] = s.round(4).tolist()
             print(f"    without {CRIT[j]:7s} {fmt(s)}")
         res["leave_one_out"] = loo
+
+        # 4b. the correlated cluster (pk, keygen, online) counted once: keep one
+        # of its members with ct and the two security criteria
+        print("\n  [4b] Correlated cluster (pk, keygen, online) represented by one member")
+        clus = {}
+        for j in (0, 2, 3):
+            keep = [j, 1, 4, 5]
+            for lab, im, mc in (("indicators", base_im, base_mc),
+                                ("expert", IM_ENC["expert (v1 rubric)"], MC_ENC["expert (v1 rubric)"])):
+                Xv, cv, nv = matrix(kg, on, im, mc, keep)
+                for how in ("vector", "max", "minmax", "log-vector"):
+                    s = topsis(Xv, entropy_w(Xv), cv, how)
+                    clus[f"only {CRIT[j]} | {lab} | {how}"] = s.round(4).tolist()
+                    print(f"    only {CRIT[j]:7s} [{lab:10s}] {how:10s} {fmt(s)}")
+        res["cluster_once"] = clus
+
+        # 4c. correlation-aware CRITIC weights instead of entropy weights
+        print("\n  [4c] CRITIC weights (contrast x conflict; Diakoulaki et al. 1995)")
+        crit_res = {}
+        for lab, im, mc, keep in variants:
+            Xv, cv, nv = matrix(kg, on, im, mc, keep)
+            w = critic_w(Xv, cv)
+            for how in ("vector", "max", "minmax", "log-vector"):
+                s = topsis(Xv, w, cv, how)
+                crit_res[f"{lab} | {how}"] = dict(weights=w.round(3).tolist(), scores=s.round(4).tolist())
+                print(f"    {lab:45s} {how:10s} w={np.round(w, 3)}  {fmt(s)}")
+        res["critic"] = crit_res
 
         # 5. rank reversal: remove one alternative, check order of the rest
         print("\n  [5] Rank reversal under removal of one alternative (global, entropy re-derived)")

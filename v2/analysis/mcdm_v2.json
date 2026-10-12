@@ -419,6 +419,714 @@
     0.228
    ]
   },
+  "cluster_once": {
+   "only pk | indicators | vector": [
+    0.9454,
+    0.926,
+    0.7129,
+    0.2824
+   ],
+   "only pk | indicators | max": [
+    0.9438,
+    0.9209,
+    0.7038,
+    0.2896
+   ],
+   "only pk | indicators | minmax": [
+    0.943,
+    0.9153,
+    0.6967,
+    0.2932
+   ],
+   "only pk | indicators | log-vector": [
+    0.8426,
+    0.8055,
+    0.6429,
+    0.2626
+   ],
+   "only pk | expert | vector": [
+    0.9453,
+    0.9325,
+    0.7163,
+    0.2824
+   ],
+   "only pk | expert | max": [
+    0.9436,
+    0.9303,
+    0.7089,
+    0.2897
+   ],
+   "only pk | expert | minmax": [
+    0.9426,
+    0.9285,
+    0.7047,
+    0.2935
+   ],
+   "only pk | expert | log-vector": [
+    0.8396,
+    0.8217,
+    0.6725,
+    0.2629
+   ],
+   "only keygen | indicators | vector": [
+    0.9479,
+    0.9293,
+    0.7252,
+    0.2713
+   ],
+   "only keygen | indicators | max": [
+    0.9464,
+    0.9244,
+    0.7163,
+    0.2783
+   ],
+   "only keygen | indicators | minmax": [
+    0.9455,
+    0.9188,
+    0.7088,
+    0.2825
+   ],
+   "only keygen | indicators | log-vector": [
+    0.9145,
+    0.734,
+    0.7877,
+    0.1491
+   ],
+   "only keygen | expert | vector": [
+    0.9478,
+    0.9356,
+    0.7285,
+    0.2713
+   ],
+   "only keygen | expert | max": [
+    0.9462,
+    0.9334,
+    0.7213,
+    0.2784
+   ],
+   "only keygen | expert | minmax": [
+    0.9451,
+    0.9315,
+    0.7166,
+    0.2827
+   ],
+   "only keygen | expert | log-vector": [
+    0.9141,
+    0.7371,
+    0.806,
+    0.148
+   ],
+   "only online | indicators | vector": [
+    0.8681,
+    0.8199,
+    0.0,
+    0.8629
+   ],
+   "only online | indicators | max": [
+    0.8698,
+    0.8155,
+    0.0,
+    0.8444
+   ],
+   "only online | indicators | minmax": [
+    0.8759,
+    0.8143,
+    0.0,
+    0.8144
+   ],
+   "only online | indicators | log-vector": [
+    0.6283,
+    0.5133,
+    0.0,
+    0.6745
+   ],
+   "only online | expert | vector": [
+    0.8662,
+    0.8335,
+    0.0122,
+    0.9098
+   ],
+   "only online | expert | max": [
+    0.8672,
+    0.8343,
+    0.0172,
+    0.9024
+   ],
+   "only online | expert | minmax": [
+    0.8721,
+    0.8391,
+    0.0268,
+    0.8808
+   ],
+   "only online | expert | log-vector": [
+    0.5593,
+    0.5143,
+    0.0401,
+    0.8151
+   ]
+  },
+  "critic": {
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+    "weights": [
+     0.176,
+     0.145,
+     0.177,
+     0.13,
+     0.115,
+     0.257
+    ],
+    "scores": [
+     0.8899,
+     0.8719,
+     0.5826,
+     0.3929
+    ]
+   },
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+    "weights": [
+     0.176,
+     0.145,
+     0.177,
+     0.13,
+     0.115,
+     0.257
+    ],
+    "scores": [
+     0.8454,
+     0.8266,
+     0.5628,
+     0.4051
+    ]
+   },
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+    "weights": [
+     0.176,
+     0.145,
+     0.177,
+     0.13,
+     0.115,
+     0.257
+    ],
+    "scores": [
+     0.5594,
+     0.5449,
+     0.4311,
+     0.5324
+    ]
+   },
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+    "weights": [
+     0.176,
+     0.145,
+     0.177,
+     0.13,
+     0.115,
+     0.257
+    ],
+    "scores": [
+     0.7894,
+     0.6892,
+     0.6197,
+     0.2835
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | vector": {
+    "weights": [
+     0.187,
+     0.232,
+     0.188,
+     0.175,
+     0.099,
+     0.119
+    ],
+    "scores": [
+     0.9131,
+     0.8876,
+     0.4992,
+     0.4769
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | max": {
+    "weights": [
+     0.187,
+     0.232,
+     0.188,
+     0.175,
+     0.099,
+     0.119
+    ],
+    "scores": [
+     0.9131,
+     0.8826,
+     0.4842,
+     0.4806
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | minmax": {
+    "weights": [
+     0.187,
+     0.232,
+     0.188,
+     0.175,
+     0.099,
+     0.119
+    ],
+    "scores": [
+     0.9183,
+     0.8755,
+     0.4532,
+     0.4688
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | log-vector": {
+    "weights": [
+     0.187,
+     0.232,
+     0.188,
+     0.175,
+     0.099,
+     0.119
+    ],
+    "scores": [
+     0.8124,
+     0.7128,
+     0.5651,
+     0.3222
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+    "weights": [
+     0.198,
+     0.132,
+     0.198,
+     0.121,
+     0.105,
+     0.245
+    ],
+    "scores": [
+     0.9028,
+     0.8616,
+     0.615,
+     0.3475
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | max": {
+    "weights": [
+     0.198,
+     0.132,
+     0.198,
+     0.121,
+     0.105,
+     0.245
+    ],
+    "scores": [
+     0.8612,
+     0.821,
+     0.5917,
+     0.3627
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+    "weights": [
+     0.198,
+     0.132,
+     0.198,
+     0.121,
+     0.105,
+     0.245
+    ],
+    "scores": [
+     0.5812,
+     0.5642,
+     0.4649,
+     0.5041
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+    "weights": [
+     0.198,
+     0.132,
+     0.198,
+     0.121,
+     0.105,
+     0.245
+    ],
+    "scores": [
+     0.8214,
+     0.6774,
+     0.5839,
+     0.2572
+    ]
+   },
+   "impl=indicators, strict | math=indicators | vector": {
+    "weights": [
+     0.209,
+     0.203,
+     0.211,
+     0.153,
+     0.105,
+     0.12
+    ],
+    "scores": [
+     0.9254,
+     0.8782,
+     0.5517,
+     0.4162
+    ]
+   },
+   "impl=indicators, strict | math=indicators | max": {
+    "weights": [
+     0.209,
+     0.203,
+     0.211,
+     0.153,
+     0.105,
+     0.12
+    ],
+    "scores": [
+     0.925,
+     0.8666,
+     0.533,
+     0.422
+    ]
+   },
+   "impl=indicators, strict | math=indicators | minmax": {
+    "weights": [
+     0.209,
+     0.203,
+     0.211,
+     0.153,
+     0.105,
+     0.12
+    ],
+    "scores": [
+     0.9284,
+     0.8576,
+     0.4973,
+     0.4196
+    ]
+   },
+   "impl=indicators, strict | math=indicators | log-vector": {
+    "weights": [
+     0.209,
+     0.203,
+     0.211,
+     0.153,
+     0.105,
+     0.12
+    ],
+    "scores": [
+     0.8493,
+     0.7024,
+     0.56,
+     0.2774
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | vector": {
+    "weights": [
+     0.196,
+     0.132,
+     0.196,
+     0.119,
+     0.108,
+     0.249
+    ],
+    "scores": [
+     0.901,
+     0.8842,
+     0.6158,
+     0.3489
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | max": {
+    "weights": [
+     0.196,
+     0.132,
+     0.196,
+     0.119,
+     0.108,
+     0.249
+    ],
+    "scores": [
+     0.8588,
+     0.8423,
+     0.589,
+     0.3639
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+    "weights": [
+     0.196,
+     0.132,
+     0.196,
+     0.119,
+     0.108,
+     0.249
+    ],
+    "scores": [
+     0.5761,
+     0.5668,
+     0.4602,
+     0.508
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+    "weights": [
+     0.196,
+     0.132,
+     0.196,
+     0.119,
+     0.108,
+     0.249
+    ],
+    "scores": [
+     0.8174,
+     0.7142,
+     0.5897,
+     0.2594
+    ]
+   },
+   "impl=indicators, family | math=indicators | vector": {
+    "weights": [
+     0.211,
+     0.208,
+     0.213,
+     0.154,
+     0.098,
+     0.116
+    ],
+    "scores": [
+     0.9242,
+     0.9001,
+     0.5524,
+     0.4197
+    ]
+   },
+   "impl=indicators, family | math=indicators | max": {
+    "weights": [
+     0.211,
+     0.208,
+     0.213,
+     0.154,
+     0.098,
+     0.116
+    ],
+    "scores": [
+     0.9239,
+     0.8954,
+     0.5333,
+     0.4255
+    ]
+   },
+   "impl=indicators, family | math=indicators | minmax": {
+    "weights": [
+     0.211,
+     0.208,
+     0.213,
+     0.154,
+     0.098,
+     0.116
+    ],
+    "scores": [
+     0.9271,
+     0.895,
+     0.4993,
+     0.424
+    ]
+   },
+   "impl=indicators, family | math=indicators | log-vector": {
+    "weights": [
+     0.211,
+     0.208,
+     0.213,
+     0.154,
+     0.098,
+     0.116
+    ],
+    "scores": [
+     0.8447,
+     0.7357,
+     0.5748,
+     0.2808
+    ]
+   },
+   "ablate math | vector": {
+    "weights": [
+     0.238,
+     0.222,
+     0.239,
+     0.176,
+     0.124
+    ],
+    "scores": [
+     0.9273,
+     0.8769,
+     0.5588,
+     0.4116
+    ]
+   },
+   "ablate math | max": {
+    "weights": [
+     0.238,
+     0.222,
+     0.239,
+     0.176,
+     0.124
+    ],
+    "scores": [
+     0.9265,
+     0.8634,
+     0.5432,
+     0.4201
+    ]
+   },
+   "ablate math | minmax": {
+    "weights": [
+     0.238,
+     0.222,
+     0.239,
+     0.176,
+     0.124
+    ],
+    "scores": [
+     0.9278,
+     0.8489,
+     0.5212,
+     0.4307
+    ]
+   },
+   "ablate math | log-vector": {
+    "weights": [
+     0.238,
+     0.222,
+     0.239,
+     0.176,
+     0.124
+    ],
+    "scores": [
+     0.8518,
+     0.6941,
+     0.5747,
+     0.2769
+    ]
+   },
+   "ablate impl | vector": {
+    "weights": [
+     0.22,
+     0.235,
+     0.221,
+     0.182,
+     0.142
+    ],
+    "scores": [
+     0.9199,
+     0.9011,
+     0.5352,
+     0.4438
+    ]
+   },
+   "ablate impl | max": {
+    "weights": [
+     0.22,
+     0.235,
+     0.221,
+     0.182,
+     0.142
+    ],
+    "scores": [
+     0.9192,
+     0.9003,
+     0.5198,
+     0.4504
+    ]
+   },
+   "ablate impl | minmax": {
+    "weights": [
+     0.22,
+     0.235,
+     0.221,
+     0.182,
+     0.142
+    ],
+    "scores": [
+     0.9229,
+     0.9048,
+     0.4858,
+     0.4465
+    ]
+   },
+   "ablate impl | log-vector": {
+    "weights": [
+     0.22,
+     0.235,
+     0.221,
+     0.182,
+     0.142
+    ],
+    "scores": [
+     0.8276,
+     0.7303,
+     0.6002,
+     0.2991
+    ]
+   },
+   "ablate both security criteria | vector": {
+    "weights": [
+     0.257,
+     0.267,
+     0.258,
+     0.219
+    ],
+    "scores": [
+     0.9213,
+     0.9028,
+     0.5406,
+     0.4431
+    ]
+   },
+   "ablate both security criteria | max": {
+    "weights": [
+     0.257,
+     0.267,
+     0.258,
+     0.219
+    ],
+    "scores": [
+     0.9199,
+     0.9012,
+     0.5295,
+     0.4535
+    ]
+   },
+   "ablate both security criteria | minmax": {
+    "weights": [
+     0.257,
+     0.267,
+     0.258,
+     0.219
+    ],
+    "scores": [
+     0.9208,
+     0.9022,
+     0.5124,
+     0.4672
+    ]
+   },
+   "ablate both security criteria | log-vector": {
+    "weights": [
+     0.257,
+     0.267,
+     0.258,
+     0.219
+    ],
+    "scores": [
+     0.8266,
+     0.7234,
+     0.6339,
+     0.3029
+    ]
+   }
+  },
   "rank_reversal": {
    "ML-KEM": {
     "order": [
@@ -960,6 +1668,714 @@
     0.5654,
     0.4245
    ]
+  },
+  "cluster_once": {
+   "only pk | indicators | vector": [
+    0.9454,
+    0.926,
+    0.7129,
+    0.2824
+   ],
+   "only pk | indicators | max": [
+    0.9438,
+    0.9209,
+    0.7038,
+    0.2896
+   ],
+   "only pk | indicators | minmax": [
+    0.943,
+    0.9153,
+    0.6967,
+    0.2932
+   ],
+   "only pk | indicators | log-vector": [
+    0.8426,
+    0.8055,
+    0.6429,
+    0.2626
+   ],
+   "only pk | expert | vector": [
+    0.9453,
+    0.9325,
+    0.7163,
+    0.2824
+   ],
+   "only pk | expert | max": [
+    0.9436,
+    0.9303,
+    0.7089,
+    0.2897
+   ],
+   "only pk | expert | minmax": [
+    0.9426,
+    0.9285,
+    0.7047,
+    0.2935
+   ],
+   "only pk | expert | log-vector": [
+    0.8396,
+    0.8217,
+    0.6725,
+    0.2629
+   ],
+   "only keygen | indicators | vector": [
+    0.9428,
+    0.9224,
+    0.6942,
+    0.2937
+   ],
+   "only keygen | indicators | max": [
+    0.9412,
+    0.9172,
+    0.685,
+    0.3009
+   ],
+   "only keygen | indicators | minmax": [
+    0.9403,
+    0.9112,
+    0.677,
+    0.3052
+   ],
+   "only keygen | indicators | log-vector": [
+    0.8956,
+    0.7294,
+    0.3744,
+    0.1798
+   ],
+   "only keygen | expert | vector": [
+    0.9427,
+    0.9292,
+    0.6977,
+    0.2938
+   ],
+   "only keygen | expert | max": [
+    0.941,
+    0.927,
+    0.6902,
+    0.3011
+   ],
+   "only keygen | expert | minmax": [
+    0.9398,
+    0.925,
+    0.6853,
+    0.3056
+   ],
+   "only keygen | expert | log-vector": [
+    0.8948,
+    0.734,
+    0.3795,
+    0.1788
+   ],
+   "only online | indicators | vector": [
+    0.9433,
+    0.9232,
+    0.0,
+    0.9449
+   ],
+   "only online | indicators | max": [
+    0.9417,
+    0.9179,
+    0.0,
+    0.9326
+   ],
+   "only online | indicators | minmax": [
+    0.9409,
+    0.9122,
+    0.0,
+    0.9135
+   ],
+   "only online | indicators | log-vector": [
+    0.8793,
+    0.8518,
+    0.0,
+    0.6484
+   ],
+   "only online | expert | vector": [
+    0.9432,
+    0.93,
+    0.0053,
+    0.9753
+   ],
+   "only online | expert | max": [
+    0.9415,
+    0.9277,
+    0.0078,
+    0.9702
+   ],
+   "only online | expert | minmax": [
+    0.9405,
+    0.9259,
+    0.0128,
+    0.9579
+   ],
+   "only online | expert | log-vector": [
+    0.878,
+    0.8652,
+    0.0116,
+    0.6594
+   ]
+  },
+  "critic": {
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+    "weights": [
+     0.178,
+     0.14,
+     0.174,
+     0.142,
+     0.117,
+     0.248
+    ],
+    "scores": [
+     0.8976,
+     0.8804,
+     0.5514,
+     0.4336
+    ]
+   },
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+    "weights": [
+     0.178,
+     0.14,
+     0.174,
+     0.142,
+     0.117,
+     0.248
+    ],
+    "scores": [
+     0.8547,
+     0.8363,
+     0.5399,
+     0.4377
+    ]
+   },
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+    "weights": [
+     0.178,
+     0.14,
+     0.174,
+     0.142,
+     0.117,
+     0.248
+    ],
+    "scores": [
+     0.572,
+     0.558,
+     0.4304,
+     0.5347
+    ]
+   },
+   "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+    "weights": [
+     0.178,
+     0.14,
+     0.174,
+     0.142,
+     0.117,
+     0.248
+    ],
+    "scores": [
+     0.7993,
+     0.7194,
+     0.372,
+     0.34
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | vector": {
+    "weights": [
+     0.185,
+     0.217,
+     0.179,
+     0.2,
+     0.1,
+     0.119
+    ],
+    "scores": [
+     0.9216,
+     0.8983,
+     0.4653,
+     0.5185
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | max": {
+    "weights": [
+     0.185,
+     0.217,
+     0.179,
+     0.2,
+     0.1,
+     0.119
+    ],
+    "scores": [
+     0.9207,
+     0.8919,
+     0.4571,
+     0.5161
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | minmax": {
+    "weights": [
+     0.185,
+     0.217,
+     0.179,
+     0.2,
+     0.1,
+     0.119
+    ],
+    "scores": [
+     0.9235,
+     0.8807,
+     0.4391,
+     0.493
+    ]
+   },
+   "impl=expert (v1 rubric) | math=indicators | log-vector": {
+    "weights": [
+     0.185,
+     0.217,
+     0.179,
+     0.2,
+     0.1,
+     0.119
+    ],
+    "scores": [
+     0.8321,
+     0.759,
+     0.3231,
+     0.3904
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+    "weights": [
+     0.201,
+     0.128,
+     0.196,
+     0.131,
+     0.106,
+     0.237
+    ],
+    "scores": [
+     0.9086,
+     0.8678,
+     0.5877,
+     0.3859
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | max": {
+    "weights": [
+     0.201,
+     0.128,
+     0.196,
+     0.131,
+     0.106,
+     0.237
+    ],
+    "scores": [
+     0.8684,
+     0.8283,
+     0.572,
+     0.3935
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+    "weights": [
+     0.201,
+     0.128,
+     0.196,
+     0.131,
+     0.106,
+     0.237
+    ],
+    "scores": [
+     0.5921,
+     0.5756,
+     0.4641,
+     0.5064
+    ]
+   },
+   "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+    "weights": [
+     0.201,
+     0.128,
+     0.196,
+     0.131,
+     0.106,
+     0.237
+    ],
+    "scores": [
+     0.8254,
+     0.6969,
+     0.3617,
+     0.3082
+    ]
+   },
+   "impl=indicators, strict | math=indicators | vector": {
+    "weights": [
+     0.209,
+     0.191,
+     0.201,
+     0.176,
+     0.103,
+     0.12
+    ],
+    "scores": [
+     0.9314,
+     0.8862,
+     0.5192,
+     0.4572
+    ]
+   },
+   "impl=indicators, strict | math=indicators | max": {
+    "weights": [
+     0.209,
+     0.191,
+     0.201,
+     0.176,
+     0.103,
+     0.12
+    ],
+    "scores": [
+     0.9305,
+     0.8738,
+     0.5072,
+     0.4572
+    ]
+   },
+   "impl=indicators, strict | math=indicators | minmax": {
+    "weights": [
+     0.209,
+     0.191,
+     0.201,
+     0.176,
+     0.103,
+     0.12
+    ],
+    "scores": [
+     0.9324,
+     0.8622,
+     0.4832,
+     0.4441
+    ]
+   },
+   "impl=indicators, strict | math=indicators | log-vector": {
+    "weights": [
+     0.209,
+     0.191,
+     0.201,
+     0.176,
+     0.103,
+     0.12
+    ],
+    "scores": [
+     0.8582,
+     0.7335,
+     0.335,
+     0.3411
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | vector": {
+    "weights": [
+     0.199,
+     0.128,
+     0.194,
+     0.13,
+     0.109,
+     0.24
+    ],
+    "scores": [
+     0.9069,
+     0.8906,
+     0.5881,
+     0.3872
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | max": {
+    "weights": [
+     0.199,
+     0.128,
+     0.194,
+     0.13,
+     0.109,
+     0.24
+    ],
+    "scores": [
+     0.8662,
+     0.85,
+     0.5693,
+     0.3944
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+    "weights": [
+     0.199,
+     0.128,
+     0.194,
+     0.13,
+     0.109,
+     0.24
+    ],
+    "scores": [
+     0.5872,
+     0.5785,
+     0.4594,
+     0.51
+    ]
+   },
+   "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+    "weights": [
+     0.199,
+     0.128,
+     0.194,
+     0.13,
+     0.109,
+     0.24
+    ],
+    "scores": [
+     0.8215,
+     0.7357,
+     0.3643,
+     0.3104
+    ]
+   },
+   "impl=indicators, family | math=indicators | vector": {
+    "weights": [
+     0.21,
+     0.195,
+     0.203,
+     0.178,
+     0.097,
+     0.117
+    ],
+    "scores": [
+     0.9305,
+     0.908,
+     0.5193,
+     0.4604
+    ]
+   },
+   "impl=indicators, family | math=indicators | max": {
+    "weights": [
+     0.21,
+     0.195,
+     0.203,
+     0.178,
+     0.097,
+     0.117
+    ],
+    "scores": [
+     0.9296,
+     0.9025,
+     0.5069,
+     0.4605
+    ]
+   },
+   "impl=indicators, family | math=indicators | minmax": {
+    "weights": [
+     0.21,
+     0.195,
+     0.203,
+     0.178,
+     0.097,
+     0.117
+    ],
+    "scores": [
+     0.9313,
+     0.8999,
+     0.4846,
+     0.4484
+    ]
+   },
+   "impl=indicators, family | math=indicators | log-vector": {
+    "weights": [
+     0.21,
+     0.195,
+     0.203,
+     0.178,
+     0.097,
+     0.117
+    ],
+    "scores": [
+     0.8542,
+     0.7688,
+     0.3409,
+     0.3455
+    ]
+   },
+   "ablate math | vector": {
+    "weights": [
+     0.239,
+     0.209,
+     0.232,
+     0.198,
+     0.123
+    ],
+    "scores": [
+     0.9334,
+     0.8849,
+     0.5289,
+     0.4507
+    ]
+   },
+   "ablate math | max": {
+    "weights": [
+     0.239,
+     0.209,
+     0.232,
+     0.198,
+     0.123
+    ],
+    "scores": [
+     0.9321,
+     0.8707,
+     0.5199,
+     0.4535
+    ]
+   },
+   "ablate math | minmax": {
+    "weights": [
+     0.239,
+     0.209,
+     0.232,
+     0.198,
+     0.123
+    ],
+    "scores": [
+     0.9319,
+     0.8535,
+     0.5104,
+     0.4536
+    ]
+   },
+   "ablate math | log-vector": {
+    "weights": [
+     0.239,
+     0.209,
+     0.232,
+     0.198,
+     0.123
+    ],
+    "scores": [
+     0.8611,
+     0.7259,
+     0.3439,
+     0.3408
+    ]
+   },
+   "ablate impl | vector": {
+    "weights": [
+     0.22,
+     0.22,
+     0.213,
+     0.205,
+     0.142
+    ],
+    "scores": [
+     0.9273,
+     0.9107,
+     0.5039,
+     0.4827
+    ]
+   },
+   "ablate impl | max": {
+    "weights": [
+     0.22,
+     0.22,
+     0.213,
+     0.205,
+     0.142
+    ],
+    "scores": [
+     0.926,
+     0.909,
+     0.4953,
+     0.4835
+    ]
+   },
+   "ablate impl | minmax": {
+    "weights": [
+     0.22,
+     0.22,
+     0.213,
+     0.205,
+     0.142
+    ],
+    "scores": [
+     0.9277,
+     0.9111,
+     0.4742,
+     0.4685
+    ]
+   },
+   "ablate impl | log-vector": {
+    "weights": [
+     0.22,
+     0.22,
+     0.213,
+     0.205,
+     0.142
+    ],
+    "scores": [
+     0.8425,
+     0.7709,
+     0.3452,
+     0.3669
+    ]
+   },
+   "ablate both security criteria | vector": {
+    "weights": [
+     0.259,
+     0.249,
+     0.252,
+     0.24
+    ],
+    "scores": [
+     0.9291,
+     0.9128,
+     0.513,
+     0.4792
+    ]
+   },
+   "ablate both security criteria | max": {
+    "weights": [
+     0.259,
+     0.249,
+     0.252,
+     0.24
+    ],
+    "scores": [
+     0.9271,
+     0.9104,
+     0.5085,
+     0.4837
+    ]
+   },
+   "ablate both security criteria | minmax": {
+    "weights": [
+     0.259,
+     0.249,
+     0.252,
+     0.24
+    ],
+    "scores": [
+     0.926,
+     0.909,
+     0.5058,
+     0.4865
+    ]
+   },
+   "ablate both security criteria | log-vector": {
+    "weights": [
+     0.259,
+     0.249,
+     0.252,
+     0.24
+    ],
+    "scores": [
+     0.8433,
+     0.7671,
+     0.3591,
+     0.3717
+    ]
+   }
   },
   "rank_reversal": {
    "ML-KEM": {

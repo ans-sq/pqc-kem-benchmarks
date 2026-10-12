@@ -59,4 +59,6 @@ done
 run $MPL analysis/make_figures_v2.py $D /home/anss/random/paper_v2/figures
 
 run $PY -I analysis/wan_stats.py $D > $A/wan_protocols.csv
+# cross-platform replication (data/xplat/{amd,arm}/data, from xplat/provision.sh fetch)
+[ -d $D/xplat ] && run $PY -I analysis/xplat_analysis.py $D > $A/xplat.txt
 echo "analysis written to $A"

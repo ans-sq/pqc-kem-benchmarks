@@ -85,6 +85,12 @@ def run_cell(impl, group, ch, mode, n):
 
 
 def campaign(conditions, cells, rounds, per, out, pcap_dir=None, seed=20261012):
+    # cells whose liboqs build is absent on this host (the official AVX2 HQC
+    # build exists only on x86) are skipped, not failed
+    missing = sorted({c[0] for c in cells if not os.path.isdir(f"{V2}/install-{c[0]}")})
+    if missing:
+        print(f"skipping cells of absent builds: {missing}", file=sys.stderr, flush=True)
+        cells = [c for c in cells if c[0] not in missing]
     rng = random.Random(seed)
     w = None
     for cond in conditions:

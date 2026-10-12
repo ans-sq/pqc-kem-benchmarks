@@ -1,0 +1,61 @@
+== laptop (Intel i7-1355U, 1.7 GHz fixed)
+   CPU: 13th Gen Intel(R) Core(TM) i7-1355U
+   between-repetition spread: median 0.2%, max 14.9%
+   HQC -O0 factor (0.15 ref, all ops/cats): 4.36-4.60
+   spec factor 2023->2025 (ref -O3):        0.78-1.05
+   SIMD factor (liboqs ref / official AVX2): 41.36-94.97
+   McEliece -O1 decaps factor:               2.28-4.68
+   official ref / liboqs ref (0.16):         1.00-1.00
+   ML-KEM-512: encaps+decaps 37.3 us, keygen 15.2 us
+   NTRU (ntruhps2048677)    online x     1.1   keygen x       7.8
+   HQC-1 (AVX2)             online x     7.1   keygen x       2.7
+   HQC-1 (liboqs ref.)      online x   342.7   keygen x     166.2
+   mceliece348864           online x     2.1   keygen x    3910.2
+   TLS prov_rtt10 native hybrid vs x25519                         +0.33 ms [+0.30, +0.36] equiv=True
+   TLS prov_rtt10 provider HQC-1 AVX2 vs provider ML-KEM-512      +0.11 ms [+0.08, +0.16] equiv=True
+   TLS prov_rtt10 provider HQC-1 ref vs provider ML-KEM-512      +17.81 ms [+17.77, +17.86] equiv=False
+   TLS prov_rtt10 provider ML-KEM-512 vs x25519                   +2.35 ms [+2.31, +2.39] equiv=False
+   TLS prov_rtt50 native hybrid vs x25519                         +0.34 ms [+0.32, +0.35] equiv=True
+   TLS prov_rtt50 provider HQC-1 AVX2 vs provider ML-KEM-512      +0.08 ms [+0.07, +0.12] equiv=True
+   TLS prov_rtt50 provider HQC-1 ref vs provider ML-KEM-512      +17.71 ms [+17.68, +17.76] equiv=False
+   TLS prov_rtt50 provider ML-KEM-512 vs x25519                   +2.40 ms [+2.37, +2.42] equiv=False
+== AMD EPYC Zen 4 (GCP C3D)
+   CPU: AMD EPYC 9B14
+   between-repetition spread: median 0.2%, max 13.3%
+   HQC -O0 factor (0.15 ref, all ops/cats): 2.63-2.99
+   spec factor 2023->2025 (ref -O3):        1.17-1.57
+   SIMD factor (liboqs ref / official AVX2): 35.39-80.55
+   McEliece -O1 decaps factor:               1.10-1.15
+   official ref / liboqs ref (0.16):         1.00-1.02
+   ML-KEM-512: encaps+decaps 12.9 us, keygen 5.6 us
+   NTRU (ntruhps2048677)    online x     1.5   keygen x       9.8
+   HQC-1 (AVX2)             online x    10.6   keygen x       3.7
+   HQC-1 (liboqs ref.)      online x   435.8   keygen x     197.5
+   mceliece348864           online x     2.9   keygen x    5780.0
+   TLS prov_rtt10 native hybrid vs x25519                         +0.15 ms [+0.14, +0.16] equiv=True
+   TLS prov_rtt10 provider HQC-1 AVX2 vs provider ML-KEM-512      +0.09 ms [+0.08, +0.11] equiv=True
+   TLS prov_rtt10 provider HQC-1 ref vs provider ML-KEM-512       +7.86 ms [+7.84, +7.87] equiv=False
+   TLS prov_rtt10 provider ML-KEM-512 vs x25519                   +1.06 ms [+1.05, +1.07] equiv=False
+   TLS prov_rtt50 native hybrid vs x25519                         +0.17 ms [+0.17, +0.18] equiv=True
+   TLS prov_rtt50 provider HQC-1 AVX2 vs provider ML-KEM-512      +0.07 ms [+0.06, +0.08] equiv=True
+   TLS prov_rtt50 provider HQC-1 ref vs provider ML-KEM-512       +7.79 ms [+7.78, +7.81] equiv=False
+   TLS prov_rtt50 provider ML-KEM-512 vs x25519                   +1.24 ms [+1.23, +1.25] equiv=False
+== Google Axion Neoverse V2 (GCP C4A)
+   CPU: Neoverse-V2
+   between-repetition spread: median 0.1%, max 42.9%
+   HQC -O0 factor (0.15 ref, all ops/cats): 4.09-4.40
+   spec factor 2023->2025 (ref -O3):        1.23-1.70
+   SIMD factor (liboqs ref / official AVX2): n/a
+   McEliece -O1 decaps factor:               n/a
+   official ref / liboqs ref (0.16):         1.05-1.07
+   ML-KEM-512: encaps+decaps 23.6 us, keygen 10.1 us
+   NTRU (ntruhps2048677)    online x     4.4   keygen x      91.8
+   HQC-1 (ref.)             online x   210.8   keygen x      97.6
+   HQC-1 (liboqs ref.)      online x   210.8   keygen x      97.6
+   mceliece348864           online x   804.0   keygen x    4967.7
+   TLS prov_rtt10 native hybrid vs x25519                         +0.11 ms [+0.11, +0.12] equiv=True
+   TLS prov_rtt10 provider HQC-1 ref vs provider ML-KEM-512       +6.89 ms [+6.87, +6.91] equiv=False
+   TLS prov_rtt10 provider ML-KEM-512 vs x25519                   +0.97 ms [+0.96, +0.98] equiv=True
+   TLS prov_rtt50 native hybrid vs x25519                         +0.13 ms [+0.12, +0.13] equiv=True
+   TLS prov_rtt50 provider HQC-1 ref vs provider ML-KEM-512       +6.86 ms [+6.86, +6.87] equiv=False
+   TLS prov_rtt50 provider ML-KEM-512 vs x25519                   +1.05 ms [+1.05, +1.06] equiv=False

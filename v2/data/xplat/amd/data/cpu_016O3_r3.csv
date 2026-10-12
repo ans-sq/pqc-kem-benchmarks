@@ -1,0 +1,11 @@
+# liboqs 0.16.0, min_sec=3.0 min_iters=31
+label,impl,scheme,op,n,median_us,mean_us,p05_us,p95_us,sd_us,khz_start,khz_end
+016O3_r3,liboqs,Classic-McEliece-348864,keygen,85,32429.999,35577.782,26767.300,57699.886,9668.358,-1,-1
+016O3_r3,liboqs,Classic-McEliece-348864,encaps,20000,9.810,11.710,9.540,17.300,3.068,-1,-1
+016O3_r3,liboqs,Classic-McEliece-348864,decaps,20000,28.550,28.941,28.420,31.860,1.677,-1,-1
+016O3_r3,liboqs,Classic-McEliece-460896,keygen,31,96302.193,101253.248,80064.560,162039.982,27378.504,-1,-1
+016O3_r3,liboqs,Classic-McEliece-460896,encaps,20000,21.130,24.508,16.870,41.920,9.124,-1,-1
+016O3_r3,liboqs,Classic-McEliece-460896,decaps,20000,55.240,55.973,55.040,62.481,2.307,-1,-1
+016O3_r3,liboqs,Classic-McEliece-8192128,keygen,31,136739.964,152071.161,105785.997,292194.035,55992.555,-1,-1
+016O3_r3,liboqs,Classic-McEliece-8192128,encaps,20000,39.330,42.316,35.440,57.430,7.956,-1,-1
+016O3_r3,liboqs,Classic-McEliece-8192128,decaps,20000,64.940,65.770,64.680,72.360,2.417,-1,-1

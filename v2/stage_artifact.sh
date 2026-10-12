@@ -15,8 +15,10 @@ rsync -a --delete --exclude='__pycache__' \
   --include='/transport/' --include='/transport/*.py' \
   --include='/mem/' --include='/mem/*.c' --include='/mem/*.sh' --include='/mem/ms_*.out' \
   --include='/wan/' --include='/wan/*.sh' --include='/wan/*.py' \
+  --include='/xplat/' --include='/xplat/*.sh' \
   --include='/data/' --include='/data/*.csv' --include='/data/*.txt' --include='/data/*.log' \
   --include='/data/analysis/***' --include='/data/pcapsum/***' \
+  --exclude='/data/xplat/*/xplat_data.tgz' --exclude='/data/xplat/*/data/pcap/' --include='/data/xplat/***' \
   --include='/data/wan/' --include='/data/wan/*.csv' \
   --include='/*.sh' --include='/*.py' --include='/ARTIFACT_README.md' \
   --exclude='*' \

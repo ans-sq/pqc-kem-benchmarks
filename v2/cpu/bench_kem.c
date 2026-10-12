@@ -25,7 +25,9 @@
     int p##_crypto_kem_dec(unsigned char *, const unsigned char *, const unsigned char *); \
     void p##_prng_init(uint8_t *, uint8_t *, uint32_t, uint32_t);
 DECL(hqc1_ref) DECL(hqc3_ref) DECL(hqc5_ref)
+#ifndef NO_OFFICIAL_AVX2  /* defined on non-x86 hosts, where only the official ref code exists */
 DECL(hqc1_avx2) DECL(hqc3_avx2) DECL(hqc5_avx2)
+#endif
 
 typedef struct {
     const char *impl, *name;
@@ -204,9 +206,11 @@ int main(int argc, char **argv) {
         OFF(hqc1_ref, "HQC-1", 2241, 2321, 4433, "official-ref"),
         OFF(hqc3_ref, "HQC-3", 4514, 4602, 8978, "official-ref"),
         OFF(hqc5_ref, "HQC-5", 7237, 7333, 14421, "official-ref"),
+#ifndef NO_OFFICIAL_AVX2
         OFF(hqc1_avx2, "HQC-1", 2241, 2321, 4433, "official-avx2"),
         OFF(hqc3_avx2, "HQC-3", 4514, 4602, 8978, "official-avx2"),
         OFF(hqc5_avx2, "HQC-5", 7237, 7333, 14421, "official-avx2"),
+#endif
     };
     const char *only = getenv("ONLY");  // optional substring filter
     int emode = getenv("ENERGY") != NULL;

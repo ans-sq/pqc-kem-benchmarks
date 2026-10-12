@@ -29,6 +29,9 @@ quic/           quic_srv.c, quic_hs.c (OpenSSL 3.5 QUIC), quic_campaign.py
 transport/      transport_v2.py (size-matched TCP transport emulation)
 wan/            provision.sh (temporary cloud VMs), vm_servers.sh, run_wan.py,
                 wan_transport.py
+xplat/          cross-platform replication on temporary cloud VMs (AMD EPYC
+                Zen 4, Google Axion Arm): provision.sh, vm_build.sh,
+                vm_campaign.sh; results in data/xplat/{amd,arm}/
 mem/            peak heap + stack per exchange (valgrind massif)
 netns.py        namespace link set-up (MTU 1500, offloads off, netem)
 pcap_flights.py per-connection packet-trace summaries (TCP and QUIC)
@@ -63,7 +66,10 @@ stage_artifact.sh               how this directory was assembled
    `sudo bash cpu/controls.sh off`.
 3. Optional WAN: `wan/provision.sh up && wan/provision.sh bundle`,
    `wan/run_wan_all.sh`, and **always** `wan/provision.sh down`.
-4. `bash analysis/analyze_all.sh`.
+4. Optional cross-platform replication: `xplat/provision.sh up`, `push`,
+   `go`, then `watch` until both logs end in ALL DONE, `fetch`, and
+   **always** `xplat/provision.sh down`.
+5. `bash analysis/analyze_all.sh`.
 
 Network experiments need no root: they run in `unshare -r -n`.
 

@@ -7,11 +7,14 @@
 set -euo pipefail
 H=/home/anss/random/bench/hqc-official
 OUT=$(dirname "$0")/obj
-for impl in ref avx2; do
+mkdir -p "$OUT"
+IMPLS="ref avx2"; XFLAGS="-mavx2 -mbmi -mpclmul"
+if [ "$(uname -m)" != x86_64 ]; then IMPLS=ref; XFLAGS=""; fi  # ARM: official ref code only
+for impl in $IMPLS; do
   if [ $impl = ref ]; then B=$H/build-pic-ref; A=ref; else B=$H/build-pic-x86_64; A=x86_64; fi
   for L in 1 3 5; do
     o=$OUT/hqc${L}_${impl}.o
-    gcc-11 -O3 -fPIC -flto -mavx2 -mbmi -mpclmul -r -nostdlib -flinker-output=nolto-rel -o $o.tmp \
+    gcc-11 -O3 -fPIC -flto $XFLAGS -r -nostdlib -flinker-output=nolto-rel -o $o.tmp \
         -Wl,--whole-archive $B/src/libhqc_${L}_${A}.a $B/lib/libfips202.a -Wl,--no-whole-archive
     p=hqc${L}_${impl}_
     objcopy --keep-global-symbol=crypto_kem_keypair --keep-global-symbol=crypto_kem_enc \

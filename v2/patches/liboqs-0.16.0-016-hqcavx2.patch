@@ -1,0 +1,211 @@
+diff --color -ruN src/liboqs-0.16.0/src/kem/hqc/CMakeLists.txt liboqs-016-hqcavx2/src/kem/hqc/CMakeLists.txt
+--- src/liboqs-0.16.0/src/kem/hqc/CMakeLists.txt	2026-10-12 11:35:21.626634034 +0100
++++ liboqs-016-hqcavx2/src/kem/hqc/CMakeLists.txt	2026-10-12 11:36:05.626570079 +0100
+@@ -6,30 +6,30 @@
+ set(_HQC_OBJS "")
+ 
+ if(OQS_ENABLE_KEM_hqc_1)
+-    add_library(hqc_1_ref OBJECT kem_hqc_1.c pqc-hqc_hqc-1_ref/code.c pqc-hqc_hqc-1_ref/crypto_memset.c pqc-hqc_hqc-1_ref/fft.c pqc-hqc_hqc-1_ref/gf.c pqc-hqc_hqc-1_ref/gf2x.c pqc-hqc_hqc-1_ref/hqc.c pqc-hqc_hqc-1_ref/kem.c pqc-hqc_hqc-1_ref/parsing.c pqc-hqc_hqc-1_ref/reed_muller.c pqc-hqc_hqc-1_ref/reed_solomon.c pqc-hqc_hqc-1_ref/symmetric.c pqc-hqc_hqc-1_ref/vector.c)
++    add_library(hqc_1_ref OBJECT kem_hqc_1.c)
+     target_compile_options(hqc_1_ref PUBLIC -DHQC_ARCH_REF=1 -DPQCHQC_NAMESPACE_PREFIX=PQCHQC_HQC1_C_ -DUSE_OQS_RANDOMBYTES)
+     target_include_directories(hqc_1_ref PRIVATE ${CMAKE_CURRENT_LIST_DIR}/pqc-hqc_hqc-1_ref)
+     target_include_directories(hqc_1_ref PRIVATE ${PROJECT_SOURCE_DIR}/src/common/pqclean_shims)
+     target_compile_options(hqc_1_ref PUBLIC -DHQC_ARCH_REF=1 -DPQCHQC_NAMESPACE_PREFIX=PQCHQC_HQC1_C_ -DUSE_OQS_RANDOMBYTES)
+-    set(_HQC_OBJS ${_HQC_OBJS} $<TARGET_OBJECTS:hqc_1_ref>)
++    set(_HQC_OBJS ${_HQC_OBJS} $<TARGET_OBJECTS:hqc_1_ref> /home/anss/random/bench/v2/cpu/obj/hqc1_avx2.o)
+ endif()
+ 
+ if(OQS_ENABLE_KEM_hqc_3)
+-    add_library(hqc_3_ref OBJECT kem_hqc_3.c pqc-hqc_hqc-3_ref/code.c pqc-hqc_hqc-3_ref/crypto_memset.c pqc-hqc_hqc-3_ref/fft.c pqc-hqc_hqc-3_ref/gf.c pqc-hqc_hqc-3_ref/gf2x.c pqc-hqc_hqc-3_ref/hqc.c pqc-hqc_hqc-3_ref/kem.c pqc-hqc_hqc-3_ref/parsing.c pqc-hqc_hqc-3_ref/reed_muller.c pqc-hqc_hqc-3_ref/reed_solomon.c pqc-hqc_hqc-3_ref/symmetric.c pqc-hqc_hqc-3_ref/vector.c)
++    add_library(hqc_3_ref OBJECT kem_hqc_3.c)
+     target_compile_options(hqc_3_ref PUBLIC -DHQC_ARCH_REF=1 -DPQCHQC_NAMESPACE_PREFIX=PQCHQC_HQC3_C_ -DUSE_OQS_RANDOMBYTES)
+     target_include_directories(hqc_3_ref PRIVATE ${CMAKE_CURRENT_LIST_DIR}/pqc-hqc_hqc-3_ref)
+     target_include_directories(hqc_3_ref PRIVATE ${PROJECT_SOURCE_DIR}/src/common/pqclean_shims)
+     target_compile_options(hqc_3_ref PUBLIC -DHQC_ARCH_REF=1 -DPQCHQC_NAMESPACE_PREFIX=PQCHQC_HQC3_C_ -DUSE_OQS_RANDOMBYTES)
+-    set(_HQC_OBJS ${_HQC_OBJS} $<TARGET_OBJECTS:hqc_3_ref>)
++    set(_HQC_OBJS ${_HQC_OBJS} $<TARGET_OBJECTS:hqc_3_ref> /home/anss/random/bench/v2/cpu/obj/hqc3_avx2.o)
+ endif()
+ 
+ if(OQS_ENABLE_KEM_hqc_5)
+-    add_library(hqc_5_ref OBJECT kem_hqc_5.c pqc-hqc_hqc-5_ref/code.c pqc-hqc_hqc-5_ref/crypto_memset.c pqc-hqc_hqc-5_ref/fft.c pqc-hqc_hqc-5_ref/gf.c pqc-hqc_hqc-5_ref/gf2x.c pqc-hqc_hqc-5_ref/hqc.c pqc-hqc_hqc-5_ref/kem.c pqc-hqc_hqc-5_ref/parsing.c pqc-hqc_hqc-5_ref/reed_muller.c pqc-hqc_hqc-5_ref/reed_solomon.c pqc-hqc_hqc-5_ref/symmetric.c pqc-hqc_hqc-5_ref/vector.c)
++    add_library(hqc_5_ref OBJECT kem_hqc_5.c)
+     target_compile_options(hqc_5_ref PUBLIC -DHQC_ARCH_REF=1 -DPQCHQC_NAMESPACE_PREFIX=PQCHQC_HQC5_C_ -DUSE_OQS_RANDOMBYTES)
+     target_include_directories(hqc_5_ref PRIVATE ${CMAKE_CURRENT_LIST_DIR}/pqc-hqc_hqc-5_ref)
+     target_include_directories(hqc_5_ref PRIVATE ${PROJECT_SOURCE_DIR}/src/common/pqclean_shims)
+     target_compile_options(hqc_5_ref PUBLIC -DHQC_ARCH_REF=1 -DPQCHQC_NAMESPACE_PREFIX=PQCHQC_HQC5_C_ -DUSE_OQS_RANDOMBYTES)
+-    set(_HQC_OBJS ${_HQC_OBJS} $<TARGET_OBJECTS:hqc_5_ref>)
++    set(_HQC_OBJS ${_HQC_OBJS} $<TARGET_OBJECTS:hqc_5_ref> /home/anss/random/bench/v2/cpu/obj/hqc5_avx2.o)
+ endif()
+ 
+ set(HQC_OBJS ${_HQC_OBJS} PARENT_SCOPE)
+diff --color -ruN src/liboqs-0.16.0/src/kem/hqc/kem_hqc_1.c liboqs-016-hqcavx2/src/kem/hqc/kem_hqc_1.c
+--- src/liboqs-0.16.0/src/kem/hqc/kem_hqc_1.c	2026-10-12 11:35:21.627256430 +0100
++++ liboqs-016-hqcavx2/src/kem/hqc/kem_hqc_1.c	2026-10-12 11:36:05.622337238 +0100
+@@ -13,7 +13,7 @@
+ 		return NULL;
+ 	}
+ 	kem->method_name = OQS_KEM_alg_hqc_1;
+-	kem->alg_version = "https://gitlab.com/pqc-hqc/hqc@161cd4f";
++	kem->alg_version = "official HQC implementation, spec 2025-08-22, gitlab.com/pqc-hqc/hqc commit 161cd4f, AVX2 (bench/v2 patch)";
+ 
+ 	kem->claimed_nist_level = 1;
+ 	kem->ind_cca = true;
+@@ -34,9 +34,16 @@
+ 	return kem;
+ }
+ 
+-extern int PQCHQC_HQC1_C_crypto_kem_keypair(uint8_t *pk, uint8_t *sk);
+-extern int PQCHQC_HQC1_C_crypto_kem_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk);
+-extern int PQCHQC_HQC1_C_crypto_kem_dec(uint8_t *ss, const uint8_t *ct, const uint8_t *sk);
++extern int hqc1_avx2_crypto_kem_keypair(uint8_t *pk, uint8_t *sk);
++extern int hqc1_avx2_crypto_kem_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk);
++extern int hqc1_avx2_crypto_kem_dec(uint8_t *ss, const uint8_t *ct, const uint8_t *sk);
++extern void hqc1_avx2_prng_init(uint8_t *e, uint8_t *p, uint32_t elen, uint32_t plen);
++#include <oqs/rand.h>
++static void reseed(void) {
++	uint8_t s[48];
++	OQS_randombytes(s, sizeof s);
++	hqc1_avx2_prng_init(s, NULL, sizeof s, 0);
++}
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_1_keypair_derand(uint8_t *public_key, uint8_t *secret_key, const uint8_t *seed) {
+ 	(void)public_key;
+@@ -46,7 +53,8 @@
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_1_keypair(uint8_t *public_key, uint8_t *secret_key) {
+-	return (OQS_STATUS) PQCHQC_HQC1_C_crypto_kem_keypair(public_key, secret_key);
++	reseed();
++	return (OQS_STATUS) hqc1_avx2_crypto_kem_keypair(public_key, secret_key);
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_1_encaps_derand(uint8_t *ciphertext, uint8_t *shared_secret, const uint8_t *public_key, const uint8_t *seed) {
+@@ -58,11 +66,12 @@
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_1_encaps(uint8_t *ciphertext, uint8_t *shared_secret, const uint8_t *public_key) {
+-	return (OQS_STATUS) PQCHQC_HQC1_C_crypto_kem_enc(ciphertext, shared_secret, public_key);
++	reseed();
++	return (OQS_STATUS) hqc1_avx2_crypto_kem_enc(ciphertext, shared_secret, public_key);
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_1_decaps(uint8_t *shared_secret, const uint8_t *ciphertext, const uint8_t *secret_key) {
+-	return (OQS_STATUS) PQCHQC_HQC1_C_crypto_kem_dec(shared_secret, ciphertext, secret_key);
++	return (OQS_STATUS) hqc1_avx2_crypto_kem_dec(shared_secret, ciphertext, secret_key);
+ }
+ 
+ #endif
+diff --color -ruN src/liboqs-0.16.0/src/kem/hqc/kem_hqc_3.c liboqs-016-hqcavx2/src/kem/hqc/kem_hqc_3.c
+--- src/liboqs-0.16.0/src/kem/hqc/kem_hqc_3.c	2026-10-12 11:35:21.627256430 +0100
++++ liboqs-016-hqcavx2/src/kem/hqc/kem_hqc_3.c	2026-10-12 11:36:05.626444562 +0100
+@@ -13,7 +13,7 @@
+ 		return NULL;
+ 	}
+ 	kem->method_name = OQS_KEM_alg_hqc_3;
+-	kem->alg_version = "https://gitlab.com/pqc-hqc/hqc@161cd4f";
++	kem->alg_version = "official HQC implementation, spec 2025-08-22, gitlab.com/pqc-hqc/hqc commit 161cd4f, AVX2 (bench/v2 patch)";
+ 
+ 	kem->claimed_nist_level = 3;
+ 	kem->ind_cca = true;
+@@ -34,9 +34,16 @@
+ 	return kem;
+ }
+ 
+-extern int PQCHQC_HQC3_C_crypto_kem_keypair(uint8_t *pk, uint8_t *sk);
+-extern int PQCHQC_HQC3_C_crypto_kem_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk);
+-extern int PQCHQC_HQC3_C_crypto_kem_dec(uint8_t *ss, const uint8_t *ct, const uint8_t *sk);
++extern int hqc3_avx2_crypto_kem_keypair(uint8_t *pk, uint8_t *sk);
++extern int hqc3_avx2_crypto_kem_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk);
++extern int hqc3_avx2_crypto_kem_dec(uint8_t *ss, const uint8_t *ct, const uint8_t *sk);
++extern void hqc3_avx2_prng_init(uint8_t *e, uint8_t *p, uint32_t elen, uint32_t plen);
++#include <oqs/rand.h>
++static void reseed(void) {
++	uint8_t s[48];
++	OQS_randombytes(s, sizeof s);
++	hqc3_avx2_prng_init(s, NULL, sizeof s, 0);
++}
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_3_keypair_derand(uint8_t *public_key, uint8_t *secret_key, const uint8_t *seed) {
+ 	(void)public_key;
+@@ -46,7 +53,8 @@
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_3_keypair(uint8_t *public_key, uint8_t *secret_key) {
+-	return (OQS_STATUS) PQCHQC_HQC3_C_crypto_kem_keypair(public_key, secret_key);
++	reseed();
++	return (OQS_STATUS) hqc3_avx2_crypto_kem_keypair(public_key, secret_key);
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_3_encaps_derand(uint8_t *ciphertext, uint8_t *shared_secret, const uint8_t *public_key, const uint8_t *seed) {
+@@ -58,11 +66,12 @@
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_3_encaps(uint8_t *ciphertext, uint8_t *shared_secret, const uint8_t *public_key) {
+-	return (OQS_STATUS) PQCHQC_HQC3_C_crypto_kem_enc(ciphertext, shared_secret, public_key);
++	reseed();
++	return (OQS_STATUS) hqc3_avx2_crypto_kem_enc(ciphertext, shared_secret, public_key);
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_3_decaps(uint8_t *shared_secret, const uint8_t *ciphertext, const uint8_t *secret_key) {
+-	return (OQS_STATUS) PQCHQC_HQC3_C_crypto_kem_dec(shared_secret, ciphertext, secret_key);
++	return (OQS_STATUS) hqc3_avx2_crypto_kem_dec(shared_secret, ciphertext, secret_key);
+ }
+ 
+ #endif
+diff --color -ruN src/liboqs-0.16.0/src/kem/hqc/kem_hqc_5.c liboqs-016-hqcavx2/src/kem/hqc/kem_hqc_5.c
+--- src/liboqs-0.16.0/src/kem/hqc/kem_hqc_5.c	2026-10-12 11:35:21.627256430 +0100
++++ liboqs-016-hqcavx2/src/kem/hqc/kem_hqc_5.c	2026-10-12 11:36:05.626618333 +0100
+@@ -13,7 +13,7 @@
+ 		return NULL;
+ 	}
+ 	kem->method_name = OQS_KEM_alg_hqc_5;
+-	kem->alg_version = "https://gitlab.com/pqc-hqc/hqc@161cd4f";
++	kem->alg_version = "official HQC implementation, spec 2025-08-22, gitlab.com/pqc-hqc/hqc commit 161cd4f, AVX2 (bench/v2 patch)";
+ 
+ 	kem->claimed_nist_level = 5;
+ 	kem->ind_cca = true;
+@@ -34,9 +34,16 @@
+ 	return kem;
+ }
+ 
+-extern int PQCHQC_HQC5_C_crypto_kem_keypair(uint8_t *pk, uint8_t *sk);
+-extern int PQCHQC_HQC5_C_crypto_kem_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk);
+-extern int PQCHQC_HQC5_C_crypto_kem_dec(uint8_t *ss, const uint8_t *ct, const uint8_t *sk);
++extern int hqc5_avx2_crypto_kem_keypair(uint8_t *pk, uint8_t *sk);
++extern int hqc5_avx2_crypto_kem_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk);
++extern int hqc5_avx2_crypto_kem_dec(uint8_t *ss, const uint8_t *ct, const uint8_t *sk);
++extern void hqc5_avx2_prng_init(uint8_t *e, uint8_t *p, uint32_t elen, uint32_t plen);
++#include <oqs/rand.h>
++static void reseed(void) {
++	uint8_t s[48];
++	OQS_randombytes(s, sizeof s);
++	hqc5_avx2_prng_init(s, NULL, sizeof s, 0);
++}
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_5_keypair_derand(uint8_t *public_key, uint8_t *secret_key, const uint8_t *seed) {
+ 	(void)public_key;
+@@ -46,7 +53,8 @@
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_5_keypair(uint8_t *public_key, uint8_t *secret_key) {
+-	return (OQS_STATUS) PQCHQC_HQC5_C_crypto_kem_keypair(public_key, secret_key);
++	reseed();
++	return (OQS_STATUS) hqc5_avx2_crypto_kem_keypair(public_key, secret_key);
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_5_encaps_derand(uint8_t *ciphertext, uint8_t *shared_secret, const uint8_t *public_key, const uint8_t *seed) {
+@@ -58,11 +66,12 @@
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_5_encaps(uint8_t *ciphertext, uint8_t *shared_secret, const uint8_t *public_key) {
+-	return (OQS_STATUS) PQCHQC_HQC5_C_crypto_kem_enc(ciphertext, shared_secret, public_key);
++	reseed();
++	return (OQS_STATUS) hqc5_avx2_crypto_kem_enc(ciphertext, shared_secret, public_key);
+ }
+ 
+ OQS_API OQS_STATUS OQS_KEM_hqc_5_decaps(uint8_t *shared_secret, const uint8_t *ciphertext, const uint8_t *secret_key) {
+-	return (OQS_STATUS) PQCHQC_HQC5_C_crypto_kem_dec(shared_secret, ciphertext, secret_key);
++	return (OQS_STATUS) hqc5_avx2_crypto_kem_dec(shared_secret, ciphertext, secret_key);
+ }
+ 
+ #endif

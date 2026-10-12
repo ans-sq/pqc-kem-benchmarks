@@ -1,0 +1,1176 @@
+{
+ "indicators": {
+  "impl": {
+   "final standard (FIPS 203 / ISO/IEC 18033-2 Amd 2)": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "default key exchange in Chrome/Firefox/OpenSSH": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "SIMD implementation in liboqs 0.16.0": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "liboqs 0.16.0: no secret-dependent branching claimed": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "liboqs 0.16.0: constant-time checked with Valgrind": [
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  "math": {
+   "assumption introduced before 2000 (Goppa SD 1978, NTRU 1998)": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "worst-case to average-case reduction (Module-LWE)": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "no official statement that security falls short of claims (NIST IR 8545 fn. 5; BSI 2026)": [
+    1,
+    1,
+    1,
+    0
+   ]
+  }
+ },
+ "encodings": {
+  "impl": {
+   "expert (v1 rubric)": [
+    5.0,
+    4.0,
+    3.0,
+    2.0
+   ],
+   "indicators, strict": [
+    5.0,
+    3.0,
+    1.0,
+    2.0
+   ],
+   "indicators, family": [
+    5.0,
+    4.0,
+    1.0,
+    2.0
+   ]
+  },
+  "math": {
+   "expert (v1 rubric)": [
+    4.0,
+    4.0,
+    4.0,
+    5.0
+   ],
+   "indicators": [
+    2.0,
+    2.0,
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "best available code": {
+  "raw_matrix": [
+   [
+    800.0,
+    768.0,
+    15.176,
+    37.287,
+    5.0,
+    2.0
+   ],
+   [
+    930.0,
+    930.0,
+    118.647,
+    41.061,
+    3.0,
+    2.0
+   ],
+   [
+    2241.0,
+    4433.0,
+    40.923,
+    265.109,
+    1.0,
+    1.0
+   ],
+   [
+    261120.0,
+    96.0,
+    59341.185,
+    79.45400000000001,
+    2.0,
+    1.0
+   ]
+  ],
+  "normalized_vector": [
+   [
+    0.003063578860899943,
+    0.16713263694815395,
+    0.0002557408579088959,
+    0.1321004987907394,
+    0.8006407690254357,
+    0.6324555320336759
+   ],
+   [
+    0.0035614104257961836,
+    0.20238717755440516,
+    0.0019993994180493393,
+    0.14547103764975863,
+    0.48038446141526137,
+    0.6324555320336759
+   ],
+   [
+    0.008581850284095966,
+    0.9647122130093312,
+    0.0006896206594758663,
+    0.9392289842013068,
+    0.16012815380508713,
+    0.31622776601683794
+   ],
+   [
+    0.9999521401977414,
+    0.020891579618519243,
+    0.9999977307083886,
+    0.28148987665726416,
+    0.32025630761017426,
+    0.31622776601683794
+   ]
+  ],
+  "entropy_weights": {
+   "pk": 0.3462,
+   "ct": 0.144,
+   "keygen": 0.365,
+   "online": 0.0907,
+   "impl": 0.039,
+   "math": 0.0152
+  },
+  "global_by_encoding": {
+   "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+    0.9611,
+    0.9518,
+    0.7644,
+    0.228
+   ],
+   "impl=expert (v1 rubric) | math=indicators": [
+    0.9611,
+    0.9518,
+    0.7643,
+    0.228
+   ],
+   "impl=indicators, strict | math=expert (v1 rubric)": [
+    0.9612,
+    0.9471,
+    0.7621,
+    0.228
+   ],
+   "impl=indicators, strict | math=indicators": [
+    0.9612,
+    0.9471,
+    0.762,
+    0.228
+   ],
+   "impl=indicators, family | math=expert (v1 rubric)": [
+    0.9612,
+    0.9508,
+    0.7623,
+    0.228
+   ],
+   "impl=indicators, family | math=indicators": [
+    0.9612,
+    0.9508,
+    0.7622,
+    0.228
+   ],
+   "ablate math": [
+    0.9612,
+    0.9471,
+    0.7621,
+    0.228
+   ],
+   "ablate impl": [
+    0.9611,
+    0.952,
+    0.7643,
+    0.228
+   ],
+   "ablate both security criteria": [
+    0.9611,
+    0.952,
+    0.7644,
+    0.228
+   ]
+  },
+  "normalization": {
+   "vector": {
+    "PQDRI": [
+     0.9612,
+     0.9471,
+     0.762,
+     0.228
+    ],
+    "Ephemeral TLS": [
+     0.9317,
+     0.8208,
+     0.5207,
+     0.4064
+    ],
+    "Static-key": [
+     0.8707,
+     0.7804,
+     0.0,
+     0.7161
+    ],
+    "Constrained device": [
+     0.9248,
+     0.8365,
+     0.5013,
+     0.4421
+    ]
+   },
+   "max": {
+    "PQDRI": [
+     0.9599,
+     0.9433,
+     0.7532,
+     0.2352
+    ],
+    "Ephemeral TLS": [
+     0.9329,
+     0.7962,
+     0.4931,
+     0.4086
+    ],
+    "Static-key": [
+     0.8795,
+     0.7755,
+     0.0,
+     0.6484
+    ],
+    "Constrained device": [
+     0.9256,
+     0.8161,
+     0.4785,
+     0.4452
+    ]
+   },
+   "minmax": {
+    "PQDRI": [
+     0.9594,
+     0.9392,
+     0.7411,
+     0.2432
+    ],
+    "Ephemeral TLS": [
+     0.9374,
+     0.775,
+     0.4522,
+     0.4048
+    ],
+    "Static-key": [
+     0.9015,
+     0.7947,
+     0.0,
+     0.5213
+    ],
+    "Constrained device": [
+     0.9302,
+     0.7986,
+     0.4426,
+     0.4424
+    ]
+   },
+   "log-vector": {
+    "PQDRI": [
+     0.9226,
+     0.7656,
+     0.7837,
+     0.1413
+    ],
+    "Ephemeral TLS": [
+     0.8799,
+     0.6407,
+     0.457,
+     0.2643
+    ],
+    "Static-key": [
+     0.7578,
+     0.5982,
+     0.0,
+     0.4381
+    ],
+    "Constrained device": [
+     0.8547,
+     0.6494,
+     0.4532,
+     0.2983
+    ]
+   }
+  },
+  "scenarios": {
+   "Ephemeral TLS": {
+    "weights": {
+     "pk": 0.175,
+     "ct": 0.175,
+     "keygen": 0.2,
+     "online": 0.15,
+     "impl": 0.2,
+     "math": 0.1
+    },
+    "scores": [
+     0.9317,
+     0.8208,
+     0.5207,
+     0.4064
+    ],
+    "leader_flips_pm25": "0/12"
+   },
+   "Static-key": {
+    "weights": {
+     "pk": 0.0,
+     "ct": 0.346,
+     "keygen": 0.0,
+     "online": 0.154,
+     "impl": 0.192,
+     "math": 0.308
+    },
+    "scores": [
+     0.8707,
+     0.7804,
+     0.0,
+     0.7161
+    ],
+    "leader_flips_pm25": "0/12"
+   },
+   "Constrained device": {
+    "weights": {
+     "pk": 0.195,
+     "ct": 0.195,
+     "keygen": 0.171,
+     "online": 0.171,
+     "impl": 0.171,
+     "math": 0.098
+    },
+    "scores": [
+     0.9248,
+     0.8365,
+     0.5013,
+     0.4421
+    ],
+    "leader_flips_pm25": "0/12"
+   }
+  },
+  "leave_one_out": {
+   "pk": [
+    0.9488,
+    0.9304,
+    0.6999,
+    0.2889
+   ],
+   "ct": [
+    1.0,
+    0.9758,
+    0.866,
+    0.1066
+   ],
+   "keygen": [
+    0.9464,
+    0.9272,
+    0.6869,
+    0.3004
+   ],
+   "online": [
+    0.9608,
+    0.9466,
+    0.7837,
+    0.213
+   ],
+   "impl": [
+    0.9611,
+    0.952,
+    0.7643,
+    0.228
+   ],
+   "math": [
+    0.9612,
+    0.9471,
+    0.7621,
+    0.228
+   ]
+  },
+  "rank_reversal": {
+   "ML-KEM": {
+    "order": [
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "reversal": false
+   },
+   "NTRU": {
+    "order": [
+     "ML-KEM",
+     "HQC",
+     "McEliece"
+    ],
+    "reversal": false
+   },
+   "HQC": {
+    "order": [
+     "ML-KEM",
+     "NTRU",
+     "McEliece"
+    ],
+    "reversal": false
+   },
+   "McEliece": {
+    "order": [
+     "ML-KEM",
+     "NTRU",
+     "HQC"
+    ],
+    "reversal": false
+   }
+  },
+  "spearman_4alt": [
+   [
+    1.0,
+    -0.2,
+    0.8,
+    0.8,
+    -0.8,
+    -0.894
+   ],
+   [
+    -0.2,
+    1.0,
+    -0.4,
+    0.4,
+    -0.4,
+    0.0
+   ],
+   [
+    0.8,
+    -0.4,
+    1.0,
+    0.4,
+    -0.4,
+    -0.447
+   ],
+   [
+    0.8,
+    0.4,
+    0.4,
+    1.0,
+    -1.0,
+    -0.894
+   ],
+   [
+    -0.8,
+    -0.4,
+    -0.4,
+    -1.0,
+    1.0,
+    0.894
+   ],
+   [
+    -0.894,
+    0.0,
+    -0.447,
+    -0.894,
+    0.894,
+    1.0
+   ]
+  ],
+  "dirichlet_rank1_share": {
+   "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+    0.9836,
+    0.0,
+    0.0,
+    0.0164
+   ],
+   "impl=expert (v1 rubric) | math=indicators": [
+    0.9938,
+    0.0,
+    0.0,
+    0.0062
+   ],
+   "impl=indicators, strict | math=expert (v1 rubric)": [
+    0.9854,
+    0.0,
+    0.0,
+    0.0146
+   ],
+   "impl=indicators, strict | math=indicators": [
+    0.9944,
+    0.0,
+    0.0,
+    0.0056
+   ],
+   "impl=indicators, family | math=expert (v1 rubric)": [
+    0.9844,
+    0.0,
+    0.0,
+    0.0156
+   ],
+   "impl=indicators, family | math=indicators": [
+    0.9941,
+    0.0,
+    0.0,
+    0.0059
+   ],
+   "ablate math": [
+    0.9892,
+    0.0,
+    0.0,
+    0.0108
+   ],
+   "ablate impl": [
+    0.9869,
+    0.0,
+    0.0,
+    0.0131
+   ],
+   "ablate both security criteria": [
+    0.9778,
+    0.0,
+    0.0,
+    0.0222
+   ]
+  },
+  "pareto": {
+   "Ephemeral TLS | indicators": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Ephemeral TLS | expert": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Static-key | indicators": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Static-key | expert": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Constrained device | indicators": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Constrained device | expert": [
+    "ML-KEM",
+    "McEliece"
+   ]
+  },
+  "ct_budget_feasible": {
+   "64": [],
+   "96": [
+    "McEliece"
+   ],
+   "102": [
+    "McEliece"
+   ],
+   "256": [
+    "McEliece"
+   ],
+   "512": [
+    "McEliece"
+   ],
+   "768": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "930": [
+    "ML-KEM",
+    "NTRU",
+    "McEliece"
+   ],
+   "1500": [
+    "ML-KEM",
+    "NTRU",
+    "McEliece"
+   ],
+   "4433": [
+    "ML-KEM",
+    "NTRU",
+    "HQC",
+    "McEliece"
+   ]
+  },
+  "nonlattice": {
+   "Ephemeral TLS": {
+    "HQC": 0.5485955635426792,
+    "McEliece": 0.4514044364573207
+   },
+   "Static-key": {
+    "HQC": 0.0,
+    "McEliece": 1.0
+   }
+  }
+ },
+ "liboqs 0.16.0 as released": {
+  "raw_matrix": [
+   [
+    800.0,
+    768.0,
+    15.176,
+    37.287,
+    5.0,
+    2.0
+   ],
+   [
+    930.0,
+    930.0,
+    118.647,
+    41.061,
+    3.0,
+    2.0
+   ],
+   [
+    2241.0,
+    4433.0,
+    2522.934,
+    12776.509,
+    1.0,
+    1.0
+   ],
+   [
+    261120.0,
+    96.0,
+    70019.192,
+    298.353,
+    2.0,
+    1.0
+   ]
+  ],
+  "normalized_vector": [
+   [
+    0.003063578860899943,
+    0.16713263694815395,
+    0.0002165996991758774,
+    0.00291757997273494,
+    0.8006407690254357,
+    0.6324555320336759
+   ],
+   [
+    0.0035614104257961836,
+    0.20238717755440516,
+    0.001693391177393274,
+    0.0032128825397717536,
+    0.48038446141526137,
+    0.6324555320336759
+   ],
+   [
+    0.008581850284095966,
+    0.9647122130093312,
+    0.03600861527679185,
+    0.9997180459642159,
+    0.16012815380508713,
+    0.31622776601683794
+   ],
+   [
+    0.9999521401977414,
+    0.020891579618519243,
+    0.999350021332235,
+    0.0233450998365486,
+    0.32025630761017426,
+    0.31622776601683794
+   ]
+  ],
+  "entropy_weights": {
+   "pk": 0.2879,
+   "ct": 0.1197,
+   "keygen": 0.2719,
+   "online": 0.2754,
+   "impl": 0.0324,
+   "math": 0.0126
+  },
+  "global_by_encoding": {
+   "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+    0.9655,
+    0.9574,
+    0.566,
+    0.4246
+   ],
+   "impl=expert (v1 rubric) | math=indicators": [
+    0.9655,
+    0.9574,
+    0.566,
+    0.4246
+   ],
+   "impl=indicators, strict | math=expert (v1 rubric)": [
+    0.9656,
+    0.9531,
+    0.5654,
+    0.4245
+   ],
+   "impl=indicators, strict | math=indicators": [
+    0.9656,
+    0.9531,
+    0.5654,
+    0.4245
+   ],
+   "impl=indicators, family | math=expert (v1 rubric)": [
+    0.9656,
+    0.9565,
+    0.5655,
+    0.4245
+   ],
+   "impl=indicators, family | math=indicators": [
+    0.9656,
+    0.9565,
+    0.5654,
+    0.4245
+   ],
+   "ablate math": [
+    0.9656,
+    0.9531,
+    0.5654,
+    0.4245
+   ],
+   "ablate impl": [
+    0.9655,
+    0.9575,
+    0.566,
+    0.4246
+   ],
+   "ablate both security criteria": [
+    0.9655,
+    0.9575,
+    0.566,
+    0.4246
+   ]
+  },
+  "normalization": {
+   "vector": {
+    "PQDRI": [
+     0.9656,
+     0.9531,
+     0.5654,
+     0.4245
+    ],
+    "Ephemeral TLS": [
+     0.9336,
+     0.8262,
+     0.5002,
+     0.44
+    ],
+    "Static-key": [
+     0.8745,
+     0.7876,
+     0.0,
+     0.7289
+    ],
+    "Constrained device": [
+     0.9274,
+     0.8427,
+     0.4797,
+     0.4778
+    ]
+   },
+   "max": {
+    "PQDRI": [
+     0.9644,
+     0.9497,
+     0.5637,
+     0.4257
+    ],
+    "Ephemeral TLS": [
+     0.9342,
+     0.8006,
+     0.4786,
+     0.4364
+    ],
+    "Static-key": [
+     0.8816,
+     0.7802,
+     0.0,
+     0.6595
+    ],
+    "Constrained device": [
+     0.9275,
+     0.8211,
+     0.4634,
+     0.4751
+    ]
+   },
+   "minmax": {
+    "PQDRI": [
+     0.9638,
+     0.9459,
+     0.562,
+     0.4265
+    ],
+    "Ephemeral TLS": [
+     0.9374,
+     0.7756,
+     0.4471,
+     0.4214
+    ],
+    "Static-key": [
+     0.9015,
+     0.795,
+     0.0,
+     0.5283
+    ],
+    "Constrained device": [
+     0.9302,
+     0.7993,
+     0.4388,
+     0.4605
+    ]
+   },
+   "log-vector": {
+    "PQDRI": [
+     0.9248,
+     0.8177,
+     0.3721,
+     0.3258
+    ],
+    "Ephemeral TLS": [
+     0.8807,
+     0.6575,
+     0.2749,
+     0.3118
+    ],
+    "Static-key": [
+     0.7706,
+     0.6259,
+     0.0,
+     0.4533
+    ],
+    "Constrained device": [
+     0.8598,
+     0.6767,
+     0.2879,
+     0.3521
+    ]
+   }
+  },
+  "scenarios": {
+   "Ephemeral TLS": {
+    "weights": {
+     "pk": 0.175,
+     "ct": 0.175,
+     "keygen": 0.2,
+     "online": 0.15,
+     "impl": 0.2,
+     "math": 0.1
+    },
+    "scores": [
+     0.9336,
+     0.8262,
+     0.5002,
+     0.44
+    ],
+    "leader_flips_pm25": "0/12"
+   },
+   "Static-key": {
+    "weights": {
+     "pk": 0.0,
+     "ct": 0.346,
+     "keygen": 0.0,
+     "online": 0.154,
+     "impl": 0.192,
+     "math": 0.308
+    },
+    "scores": [
+     0.8745,
+     0.7876,
+     0.0,
+     0.7289
+    ],
+    "leader_flips_pm25": "0/12"
+   },
+   "Constrained device": {
+    "weights": {
+     "pk": 0.195,
+     "ct": 0.195,
+     "keygen": 0.171,
+     "online": 0.171,
+     "impl": 0.171,
+     "math": 0.098
+    },
+    "scores": [
+     0.9274,
+     0.8427,
+     0.4797,
+     0.4778
+    ],
+    "leader_flips_pm25": "0/12"
+   }
+  },
+  "leave_one_out": {
+   "pk": [
+    0.9579,
+    0.9428,
+    0.4679,
+    0.5174
+   ],
+   "ct": [
+    1.0,
+    0.9789,
+    0.5844,
+    0.4048
+   ],
+   "keygen": [
+    0.959,
+    0.9442,
+    0.4895,
+    0.5036
+   ],
+   "online": [
+    0.9588,
+    0.9439,
+    0.7705,
+    0.2224
+   ],
+   "impl": [
+    0.9655,
+    0.9575,
+    0.566,
+    0.4246
+   ],
+   "math": [
+    0.9656,
+    0.9531,
+    0.5654,
+    0.4245
+   ]
+  },
+  "rank_reversal": {
+   "ML-KEM": {
+    "order": [
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "reversal": false
+   },
+   "NTRU": {
+    "order": [
+     "ML-KEM",
+     "HQC",
+     "McEliece"
+    ],
+    "reversal": false
+   },
+   "HQC": {
+    "order": [
+     "ML-KEM",
+     "NTRU",
+     "McEliece"
+    ],
+    "reversal": false
+   },
+   "McEliece": {
+    "order": [
+     "ML-KEM",
+     "NTRU",
+     "HQC"
+    ],
+    "reversal": false
+   }
+  },
+  "spearman_4alt": [
+   [
+    1.0,
+    -0.2,
+    1.0,
+    0.8,
+    -0.8,
+    -0.894
+   ],
+   [
+    -0.2,
+    1.0,
+    -0.2,
+    0.4,
+    -0.4,
+    0.0
+   ],
+   [
+    1.0,
+    -0.2,
+    1.0,
+    0.8,
+    -0.8,
+    -0.894
+   ],
+   [
+    0.8,
+    0.4,
+    0.8,
+    1.0,
+    -1.0,
+    -0.894
+   ],
+   [
+    -0.8,
+    -0.4,
+    -0.8,
+    -1.0,
+    1.0,
+    0.894
+   ],
+   [
+    -0.894,
+    0.0,
+    -0.894,
+    -0.894,
+    0.894,
+    1.0
+   ]
+  ],
+  "dirichlet_rank1_share": {
+   "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+    0.9794,
+    0.0,
+    0.0,
+    0.0206
+   ],
+   "impl=expert (v1 rubric) | math=indicators": [
+    0.993,
+    0.0,
+    0.0,
+    0.007
+   ],
+   "impl=indicators, strict | math=expert (v1 rubric)": [
+    0.9814,
+    0.0,
+    0.0,
+    0.0186
+   ],
+   "impl=indicators, strict | math=indicators": [
+    0.9936,
+    0.0,
+    0.0,
+    0.0064
+   ],
+   "impl=indicators, family | math=expert (v1 rubric)": [
+    0.9806,
+    0.0,
+    0.0,
+    0.0194
+   ],
+   "impl=indicators, family | math=indicators": [
+    0.9933,
+    0.0,
+    0.0,
+    0.0067
+   ],
+   "ablate math": [
+    0.9868,
+    0.0,
+    0.0,
+    0.0132
+   ],
+   "ablate impl": [
+    0.9837,
+    0.0,
+    0.0,
+    0.0163
+   ],
+   "ablate both security criteria": [
+    0.9716,
+    0.0,
+    0.0,
+    0.0284
+   ]
+  },
+  "pareto": {
+   "Ephemeral TLS | indicators": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Ephemeral TLS | expert": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Static-key | indicators": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Static-key | expert": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Constrained device | indicators": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "Constrained device | expert": [
+    "ML-KEM",
+    "McEliece"
+   ]
+  },
+  "ct_budget_feasible": {
+   "64": [],
+   "96": [
+    "McEliece"
+   ],
+   "102": [
+    "McEliece"
+   ],
+   "256": [
+    "McEliece"
+   ],
+   "512": [
+    "McEliece"
+   ],
+   "768": [
+    "ML-KEM",
+    "McEliece"
+   ],
+   "930": [
+    "ML-KEM",
+    "NTRU",
+    "McEliece"
+   ],
+   "1500": [
+    "ML-KEM",
+    "NTRU",
+    "McEliece"
+   ],
+   "4433": [
+    "ML-KEM",
+    "NTRU",
+    "HQC",
+    "McEliece"
+   ]
+  },
+  "nonlattice": {
+   "Ephemeral TLS": {
+    "HQC": 0.516831846217342,
+    "McEliece": 0.4831681537826579
+   },
+   "Static-key": {
+    "HQC": 0.0,
+    "McEliece": 1.0
+   }
+  }
+ }
+}

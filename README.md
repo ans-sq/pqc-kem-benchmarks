@@ -2,6 +2,15 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21855913.svg)](https://doi.org/10.5281/zenodo.21855913)
 
+## Version 2 (October 2026)
+
+The revised study, "ML-KEM, NTRU, HQC, and Classic McEliece from CPU to TLS
+and QUIC: A Parity-Controlled Measurement Study and Selection Framework",
+is reproduced from [`v2/`](v2/README.md): parity-controlled CPU and energy
+harness, size-matched TCP transport emulation, TLS 1.3 and QUIC campaigns,
+inter-network paths, packet traces, and the decision framework. The rest
+of this README describes version 1, kept for provenance.
+
 Benchmark scripts, raw measurement data, and analysis code for the paper:
 
 > A. Sohail, "Post-Quantum Key Establishment After Standardization: An

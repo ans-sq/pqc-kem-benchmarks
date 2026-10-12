@@ -1,0 +1,70 @@
+
+######## best available code
+  [1] leader per scenario x encoding x normalization
+    Ephemeral TLS      impl=expert (v1 rubric)   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Ephemeral TLS      impl=expert (v1 rubric)   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Ephemeral TLS      impl=indicators, strict   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Ephemeral TLS      impl=indicators, strict   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Ephemeral TLS      impl=indicators, family   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Ephemeral TLS      impl=indicators, family   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Static-key         impl=expert (v1 rubric)   math=expert (v1 rubric) vector:ML-KEM>McEliece>NTRU>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:McEliece>ML-KEM>NTRU>HQC  log-vector:ML-KEM>McEliece>NTRU>HQC
+    Static-key         impl=expert (v1 rubric)   math=indicators         vector:ML-KEM>NTRU>McEliece>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Static-key         impl=indicators, strict   math=expert (v1 rubric) vector:ML-KEM>McEliece>NTRU>HQC  max:ML-KEM>McEliece>NTRU>HQC  minmax:McEliece>ML-KEM>NTRU>HQC  log-vector:ML-KEM>McEliece>NTRU>HQC
+    Static-key         impl=indicators, strict   math=indicators         vector:ML-KEM>NTRU>McEliece>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Static-key         impl=indicators, family   math=expert (v1 rubric) vector:ML-KEM>McEliece>NTRU>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:McEliece>ML-KEM>NTRU>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Static-key         impl=indicators, family   math=indicators         vector:ML-KEM>NTRU>McEliece>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Constrained device impl=expert (v1 rubric)   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Constrained device impl=expert (v1 rubric)   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Constrained device impl=indicators, strict   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Constrained device impl=indicators, strict   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Constrained device impl=indicators, family   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Constrained device impl=indicators, family   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+  [2] static-key crossover: ct weight share at which McEliece first leads
+    impl=expert (v1 rubric)   math=expert (v1 rubric) vector:0.398  max:0.459  minmax:0.000  log-vector:0.366
+    impl=expert (v1 rubric)   math=indicators         vector:0.537  max:0.630  minmax:0.757  log-vector:0.506
+    impl=indicators, strict   math=expert (v1 rubric) vector:0.447  max:0.465  minmax:0.000  log-vector:0.440
+    impl=indicators, strict   math=indicators         vector:0.555  max:0.631  minmax:0.745  log-vector:0.537
+    impl=indicators, family   math=expert (v1 rubric) vector:0.424  max:0.465  minmax:0.000  log-vector:0.418
+    impl=indicators, family   math=indicators         vector:0.546  max:0.631  minmax:0.745  log-vector:0.527
+  [3] flat-Dirichlet weights over static-key criteria (ct, online, impl, math): leader share
+    impl=expert (v1 rubric)   math=expert (v1 rubric) ML-KEM=73.1%  NTRU=0.0%  HQC=0.0%  McEliece=26.9%
+    impl=expert (v1 rubric)   math=indicators         ML-KEM=90.6%  NTRU=0.0%  HQC=0.0%  McEliece=9.4%
+    impl=indicators, strict   math=expert (v1 rubric) ML-KEM=76.3%  NTRU=0.0%  HQC=0.0%  McEliece=23.7%
+    impl=indicators, strict   math=indicators         ML-KEM=91.5%  NTRU=0.0%  HQC=0.0%  McEliece=8.5%
+    impl=indicators, family   math=expert (v1 rubric) ML-KEM=74.9%  NTRU=0.0%  HQC=0.0%  McEliece=25.1%
+    impl=indicators, family   math=indicators         ML-KEM=91.0%  NTRU=0.0%  HQC=0.0%  McEliece=9.0%
+
+######## liboqs 0.16.0 as released
+  [1] leader per scenario x encoding x normalization
+    Ephemeral TLS      impl=expert (v1 rubric)   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Ephemeral TLS      impl=expert (v1 rubric)   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Ephemeral TLS      impl=indicators, strict   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Ephemeral TLS      impl=indicators, strict   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Ephemeral TLS      impl=indicators, family   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Ephemeral TLS      impl=indicators, family   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Static-key         impl=expert (v1 rubric)   math=expert (v1 rubric) vector:ML-KEM>McEliece>NTRU>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:McEliece>ML-KEM>NTRU>HQC  log-vector:ML-KEM>McEliece>NTRU>HQC
+    Static-key         impl=expert (v1 rubric)   math=indicators         vector:ML-KEM>NTRU>McEliece>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Static-key         impl=indicators, strict   math=expert (v1 rubric) vector:ML-KEM>McEliece>NTRU>HQC  max:ML-KEM>McEliece>NTRU>HQC  minmax:McEliece>ML-KEM>NTRU>HQC  log-vector:ML-KEM>McEliece>NTRU>HQC
+    Static-key         impl=indicators, strict   math=indicators         vector:ML-KEM>NTRU>McEliece>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Static-key         impl=indicators, family   math=expert (v1 rubric) vector:ML-KEM>McEliece>NTRU>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:McEliece>ML-KEM>NTRU>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Static-key         impl=indicators, family   math=indicators         vector:ML-KEM>NTRU>McEliece>HQC  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Constrained device impl=expert (v1 rubric)   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Constrained device impl=expert (v1 rubric)   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>HQC>McEliece  minmax:ML-KEM>NTRU>HQC>McEliece  log-vector:ML-KEM>NTRU>HQC>McEliece
+    Constrained device impl=indicators, strict   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Constrained device impl=indicators, strict   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Constrained device impl=indicators, family   math=expert (v1 rubric) vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+    Constrained device impl=indicators, family   math=indicators         vector:ML-KEM>NTRU>HQC>McEliece  max:ML-KEM>NTRU>McEliece>HQC  minmax:ML-KEM>NTRU>McEliece>HQC  log-vector:ML-KEM>NTRU>McEliece>HQC
+  [2] static-key crossover: ct weight share at which McEliece first leads
+    impl=expert (v1 rubric)   math=expert (v1 rubric) vector:0.385  max:0.450  minmax:0.000  log-vector:0.394
+    impl=expert (v1 rubric)   math=indicators         vector:0.533  max:0.628  minmax:0.756  log-vector:0.516
+    impl=indicators, strict   math=expert (v1 rubric) vector:0.438  max:0.456  minmax:0.000  log-vector:0.455
+    impl=indicators, strict   math=indicators         vector:0.552  max:0.629  minmax:0.745  log-vector:0.544
+    impl=indicators, family   math=expert (v1 rubric) vector:0.413  max:0.456  minmax:0.000  log-vector:0.434
+    impl=indicators, family   math=indicators         vector:0.543  max:0.629  minmax:0.745  log-vector:0.535
+  [3] flat-Dirichlet weights over static-key criteria (ct, online, impl, math): leader share
+    impl=expert (v1 rubric)   math=expert (v1 rubric) ML-KEM=62.5%  NTRU=0.0%  HQC=0.0%  McEliece=37.5%
+    impl=expert (v1 rubric)   math=indicators         ML-KEM=87.3%  NTRU=0.0%  HQC=0.0%  McEliece=12.7%
+    impl=indicators, strict   math=expert (v1 rubric) ML-KEM=67.0%  NTRU=0.0%  HQC=0.0%  McEliece=33.0%
+    impl=indicators, strict   math=indicators         ML-KEM=88.7%  NTRU=0.0%  HQC=0.0%  McEliece=11.3%
+    impl=indicators, family   math=expert (v1 rubric) ML-KEM=65.0%  NTRU=0.0%  HQC=0.0%  McEliece=35.0%
+    impl=indicators, family   math=indicators         ML-KEM=88.1%  NTRU=0.0%  HQC=0.0%  McEliece=11.9%

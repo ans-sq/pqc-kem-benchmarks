@@ -1,0 +1,1026 @@
+desc: --stacks=yes --massif-out-file=ms_016_Classic-McEliece-348864.out
+cmd: ./mem_kem Classic-McEliece-348864
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=9004877
+mem_heap_B=463319
+mem_heap_extra_B=61209
+mem_stacks_B=44296
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=14616924
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=457008
+heap_tree=peak
+n5: 474405 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 261120 0x109162: main (in /home/anss/random/bench/v2/mem/mem_kem)
+ n4: 128120 0x62AB844: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n0: 45304 in 37 places, all below massif's threshold (1.00%)
+  n1: 34176 0x62B8642: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 34176 0x638E4AD: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 34176 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 34176 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 34176 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 34176 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 34176 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 34176 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 34176 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 34176 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 32768 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 32768 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 32768 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 32768 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 32768 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 32768 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 32768 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 32768 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 32768 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 32768 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 1408 in 1 place, below massif's threshold (1.00%)
+  n1: 31744 0x6280503: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 31744 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 31744 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 31744 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 31744 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 31744 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 31744 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 31744 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 31744 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 31744 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 31744 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 31744 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 31744 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 31744 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 31744 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 31744 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 31744 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 31744 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 31744 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 31744 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+  n2: 16896 0x62A565B: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 16512 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 16512 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 16512 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 16512 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 16512 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 16512 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 16512 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 16512 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 16512 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 15872 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 15872 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 15872 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 15872 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 15872 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 15872 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 15872 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 15872 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 15872 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 15872 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 640 in 1 place, below massif's threshold (1.00%)
+   n0: 384 in 7 places, all below massif's threshold (1.00%)
+ n2: 48264 0x62A59A5: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 34176 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 32208 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n0: 32208 in 33 places, all below massif's threshold (1.00%)
+   n0: 1968 in 2 places, all below massif's threshold (1.00%)
+  n0: 14088 in 7 places, all below massif's threshold (1.00%)
+ n0: 25637 in 35 places, all below massif's threshold (1.00%)
+ n1: 11264 0x62A594F: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n0: 11264 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=26195700
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=441320
+heap_tree=detailed
+n5: 474405 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 261120 0x109162: main (in /home/anss/random/bench/v2/mem/mem_kem)
+ n4: 128120 0x62AB844: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n0: 45304 in 37 places, all below massif's threshold (1.00%)
+  n1: 34176 0x62B8642: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 34176 0x638E4AD: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 34176 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 34176 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 34176 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 34176 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 34176 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 34176 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 34176 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 34176 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 32768 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 32768 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 32768 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 32768 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 32768 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 32768 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 32768 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 32768 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 32768 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 32768 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 1408 in 1 place, below massif's threshold (1.00%)
+  n1: 31744 0x6280503: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 31744 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 31744 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 31744 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 31744 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 31744 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 31744 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 31744 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 31744 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 31744 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 31744 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 31744 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 31744 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 31744 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 31744 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 31744 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 31744 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 31744 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 31744 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 31744 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+  n2: 16896 0x62A565B: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 16512 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 16512 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 16512 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 16512 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 16512 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 16512 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 16512 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 16512 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 16512 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 15872 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 15872 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 15872 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 15872 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 15872 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 15872 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 15872 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 15872 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 15872 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 15872 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 640 in 1 place, below massif's threshold (1.00%)
+   n0: 384 in 7 places, all below massif's threshold (1.00%)
+ n2: 48264 0x62A59A5: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 34176 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 32208 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n0: 32208 in 33 places, all below massif's threshold (1.00%)
+   n0: 1968 in 2 places, all below massif's threshold (1.00%)
+  n0: 14088 in 7 places, all below massif's threshold (1.00%)
+ n0: 25637 in 35 places, all below massif's threshold (1.00%)
+ n1: 11264 0x62A594F: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n0: 11264 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=34380219
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=441320
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=40124111
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=441320
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=49208812
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=55448
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=59567465
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=441320
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=66786458
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=441320
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=76311960
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=441320
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=87278897
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=442008
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=142703523
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=42336
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=155641179
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=165359279
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=175077379
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=184795479
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=194513579
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=204231679
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=213949779
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=223667879
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=233385979
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=246303850
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83568
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=258829173
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=267076514
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=275358658
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=283640802
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=291922946
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=301943132
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83888
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=308926719
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83888
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=317593195
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84048
+heap_tree=detailed
+n7: 474405 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 261120 0x109162: main (in /home/anss/random/bench/v2/mem/mem_kem)
+ n6: 128120 0x62AB844: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n1: 34176 0x62B8642: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 34176 0x638E4AD: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 34176 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 34176 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 34176 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 34176 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 34176 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 34176 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 34176 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 34176 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 32768 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 32768 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 32768 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 32768 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 32768 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 32768 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 32768 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 32768 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 32768 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 32768 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 1408 in 1 place, below massif's threshold (1.00%)
+  n1: 31744 0x6280503: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 31744 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 31744 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 31744 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 31744 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 31744 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 31744 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 31744 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 31744 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 31744 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 31744 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 31744 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 31744 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 31744 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 31744 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 31744 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 31744 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 31744 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 31744 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 31744 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+  n0: 25896 in 35 places, all below massif's threshold (1.00%)
+  n2: 16896 0x62A565B: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 16512 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 16512 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 16512 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 16512 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 16512 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 16512 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 16512 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 16512 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 16512 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 15872 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 15872 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 15872 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 15872 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 15872 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 15872 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 15872 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 15872 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 15872 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 15872 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 640 in 1 place, below massif's threshold (1.00%)
+   n0: 384 in 7 places, all below massif's threshold (1.00%)
+  n2: 9720 0x62A563D: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 9288 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 9288 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 9288 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 9288 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 9288 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 9288 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 9288 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 9288 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 9288 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 8928 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 8928 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 8928 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 8928 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 8928 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 8928 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 8928 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 8928 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 8928 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 8928 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 360 in 1 place, below massif's threshold (1.00%)
+   n0: 432 in 7 places, all below massif's threshold (1.00%)
+  n2: 9688 0x62B8703: CRYPTO_THREAD_lock_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 6944 0x6280510: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 6944 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 6944 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 6944 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 6944 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 6944 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 6944 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 6944 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 6944 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 6944 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 6944 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 6944 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 6944 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 6944 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 6944 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 6944 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 6944 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                    n1: 6944 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n1: 6944 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                      n0: 6944 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+   n0: 2744 in 26 places, all below massif's threshold (1.00%)
+ n3: 48264 0x62A59A5: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 34176 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 32208 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n0: 32208 in 33 places, all below massif's threshold (1.00%)
+   n0: 1968 in 2 places, all below massif's threshold (1.00%)
+  n1: 8328 0x62A79B0: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n0: 8328 in 2 places, all below massif's threshold (1.00%)
+  n0: 5760 in 6 places, all below massif's threshold (1.00%)
+ n0: 12022 in 33 places, all below massif's threshold (1.00%)
+ n2: 11264 0x62A594F: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 8192 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n2: 8192 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 8192 0x63E132B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 8192 0x625EB20: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 8192 0x62AA6FC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 8192 0x5F16FB2: __pthread_once_slow (pthread_once.c:116)
+        n1: 8192 0x62B880C: CRYPTO_THREAD_run_once (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 8192 0x62AABEA: OPENSSL_init_crypto (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 8192 0x625D97A: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 8192 0x625E75C: ERR_set_mark (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 8192 0x61CE1F5: CONF_modules_load_file_ex (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 8192 0x61CE610: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 8192 0x62AA67E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 8192 0x5F16FB2: __pthread_once_slow (pthread_once.c:116)
+                n1: 8192 0x62B880C: CRYPTO_THREAD_run_once (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 8192 0x62AAE43: OPENSSL_init_crypto (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 8192 0x625B6E3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 8192 0x6392164: RAND_get_rand_method (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                    n1: 8192 0x6392821: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                     n1: 8192 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                      n1: 8192 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                       n0: 8192 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 3072 in 3 places, all below massif's threshold (1.00%)
+ n1: 7123 0x62AD123: CRYPTO_strndup (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n0: 7123 in 4 places, all below massif's threshold (1.00%)
+ n0: 6492 0x10916E: main (in /home/anss/random/bench/v2/mem/mem_kem)
+#-----------
+snapshot=30
+#-----------
+time=329137438
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84048
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=339191695
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84208
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=349262520
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83888
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=356164667
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84048
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=362850818
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84368
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=369434328
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84368
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=376113869
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84208
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=386910467
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=395188536
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=403470680
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=411752824
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=420034968
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83728
+heap_tree=detailed
+n7: 474405 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 261120 0x109162: main (in /home/anss/random/bench/v2/mem/mem_kem)
+ n6: 128120 0x62AB844: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n1: 34176 0x62B8642: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 34176 0x638E4AD: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 34176 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 34176 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 34176 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 34176 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 34176 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 34176 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 34176 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 34176 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 32768 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 32768 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 32768 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 32768 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 32768 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 32768 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 32768 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 32768 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 32768 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 32768 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 1408 in 1 place, below massif's threshold (1.00%)
+  n1: 31744 0x6280503: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 31744 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 31744 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 31744 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 31744 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 31744 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 31744 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 31744 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 31744 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 31744 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 31744 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 31744 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 31744 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 31744 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 31744 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 31744 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 31744 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 31744 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 31744 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 31744 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+  n0: 25896 in 35 places, all below massif's threshold (1.00%)
+  n2: 16896 0x62A565B: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 16512 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 16512 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 16512 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 16512 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 16512 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 16512 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 16512 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 16512 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 16512 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 15872 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 15872 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 15872 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 15872 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 15872 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 15872 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 15872 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 15872 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 15872 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 15872 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 640 in 1 place, below massif's threshold (1.00%)
+   n0: 384 in 7 places, all below massif's threshold (1.00%)
+  n2: 9720 0x62A563D: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 9288 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 9288 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 9288 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 9288 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 9288 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 9288 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 9288 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 9288 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 9288 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 8928 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 8928 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 8928 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 8928 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 8928 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 8928 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 8928 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 8928 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 8928 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 8928 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 360 in 1 place, below massif's threshold (1.00%)
+   n0: 432 in 7 places, all below massif's threshold (1.00%)
+  n2: 9688 0x62B8703: CRYPTO_THREAD_lock_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 6944 0x6280510: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 6944 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 6944 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 6944 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 6944 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 6944 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 6944 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 6944 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 6944 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 6944 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 6944 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 6944 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 6944 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 6944 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 6944 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 6944 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 6944 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                    n1: 6944 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n1: 6944 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                      n0: 6944 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+   n0: 2744 in 26 places, all below massif's threshold (1.00%)
+ n3: 48264 0x62A59A5: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 34176 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 32208 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n0: 32208 in 33 places, all below massif's threshold (1.00%)
+   n0: 1968 in 2 places, all below massif's threshold (1.00%)
+  n1: 8328 0x62A79B0: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n0: 8328 in 2 places, all below massif's threshold (1.00%)
+  n0: 5760 in 6 places, all below massif's threshold (1.00%)
+ n0: 12022 in 33 places, all below massif's threshold (1.00%)
+ n2: 11264 0x62A594F: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 8192 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n2: 8192 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 8192 0x63E132B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 8192 0x625EB20: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 8192 0x62AA6FC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 8192 0x5F16FB2: __pthread_once_slow (pthread_once.c:116)
+        n1: 8192 0x62B880C: CRYPTO_THREAD_run_once (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 8192 0x62AABEA: OPENSSL_init_crypto (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 8192 0x625D97A: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 8192 0x625E75C: ERR_set_mark (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 8192 0x61CE1F5: CONF_modules_load_file_ex (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 8192 0x61CE610: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 8192 0x62AA67E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 8192 0x5F16FB2: __pthread_once_slow (pthread_once.c:116)
+                n1: 8192 0x62B880C: CRYPTO_THREAD_run_once (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 8192 0x62AAE43: OPENSSL_init_crypto (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 8192 0x625B6E3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 8192 0x6392164: RAND_get_rand_method (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                    n1: 8192 0x6392821: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                     n1: 8192 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                      n1: 8192 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                       n0: 8192 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 3072 in 3 places, all below massif's threshold (1.00%)
+ n1: 7123 0x62AD123: CRYPTO_strndup (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n0: 7123 in 4 places, all below massif's threshold (1.00%)
+ n0: 6492 0x10916E: main (in /home/anss/random/bench/v2/mem/mem_kem)
+#-----------
+snapshot=42
+#-----------
+time=432013817
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83888
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=439012757
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83888
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=445877481
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84048
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=459109702
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84048
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=472355864
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=85008
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=479348558
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=83888
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=489750942
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84048
+heap_tree=detailed
+n7: 474405 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 261120 0x109162: main (in /home/anss/random/bench/v2/mem/mem_kem)
+ n6: 128120 0x62AB844: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n1: 34176 0x62B8642: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 34176 0x638E4AD: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 34176 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 34176 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 34176 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 34176 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 34176 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 34176 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 34176 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 34176 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 32768 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 32768 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 32768 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 32768 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 32768 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 32768 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 32768 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 32768 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 32768 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 32768 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 1408 in 1 place, below massif's threshold (1.00%)
+  n1: 31744 0x6280503: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 31744 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 31744 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 31744 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 31744 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 31744 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 31744 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 31744 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 31744 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 31744 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 31744 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 31744 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 31744 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 31744 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 31744 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 31744 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 31744 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 31744 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 31744 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 31744 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+  n0: 25896 in 35 places, all below massif's threshold (1.00%)
+  n2: 16896 0x62A565B: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 16512 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 16512 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 16512 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 16512 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 16512 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 16512 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 16512 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 16512 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 16512 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 15872 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 15872 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 15872 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 15872 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 15872 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 15872 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 15872 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 15872 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 15872 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 15872 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 640 in 1 place, below massif's threshold (1.00%)
+   n0: 384 in 7 places, all below massif's threshold (1.00%)
+  n2: 9720 0x62A563D: OPENSSL_LH_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 9288 0x638E492: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 9288 0x628209E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 9288 0x62A754D: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 9288 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 9288 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 9288 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 9288 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 9288 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n2: 9288 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 8928 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 8928 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 8928 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 8928 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 8928 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 8928 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 8928 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 8928 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                    n1: 8928 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n0: 8928 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+            n0: 360 in 1 place, below massif's threshold (1.00%)
+   n0: 432 in 7 places, all below massif's threshold (1.00%)
+  n2: 9688 0x62B8703: CRYPTO_THREAD_lock_new (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 6944 0x6280510: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 6944 0x6281976: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 6944 0x6281F4B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 6944 0x62A7528: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 6944 0x62A723F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+        n1: 6944 0x62B70F6: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 6944 0x62A73B7: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 6944 0x62A7758: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 6944 0x62826DC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 6944 0x6282AE3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 6944 0x6280591: EVP_CIPHER_fetch (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 6944 0x645A333: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 6944 0x645A7DA: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                n1: 6944 0x6287F5C: EVP_RAND_instantiate (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 6944 0x6391A1F: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 6944 0x63923EB: RAND_get0_primary (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 6944 0x639284E: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                    n1: 6944 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                     n1: 6944 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                      n0: 6944 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+   n0: 2744 in 26 places, all below massif's threshold (1.00%)
+ n3: 48264 0x62A59A5: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 34176 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n1: 32208 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n0: 32208 in 33 places, all below massif's threshold (1.00%)
+   n0: 1968 in 2 places, all below massif's threshold (1.00%)
+  n1: 8328 0x62A79B0: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n0: 8328 in 2 places, all below massif's threshold (1.00%)
+  n0: 5760 in 6 places, all below massif's threshold (1.00%)
+ n0: 12022 in 33 places, all below massif's threshold (1.00%)
+ n2: 11264 0x62A594F: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n2: 8192 0x625D062: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+   n2: 8192 0x625D320: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+    n1: 8192 0x63E132B: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+     n1: 8192 0x625EB20: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+      n1: 8192 0x62AA6FC: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+       n1: 8192 0x5F16FB2: __pthread_once_slow (pthread_once.c:116)
+        n1: 8192 0x62B880C: CRYPTO_THREAD_run_once (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+         n1: 8192 0x62AABEA: OPENSSL_init_crypto (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+          n1: 8192 0x625D97A: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+           n1: 8192 0x625E75C: ERR_set_mark (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+            n1: 8192 0x61CE1F5: CONF_modules_load_file_ex (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+             n1: 8192 0x61CE610: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+              n1: 8192 0x62AA67E: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+               n1: 8192 0x5F16FB2: __pthread_once_slow (pthread_once.c:116)
+                n1: 8192 0x62B880C: CRYPTO_THREAD_run_once (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                 n1: 8192 0x62AAE43: OPENSSL_init_crypto (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                  n1: 8192 0x625B6E3: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                   n1: 8192 0x6392164: RAND_get_rand_method (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                    n1: 8192 0x6392821: RAND_status (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+                     n1: 8192 0x5C9D68F: OQS_randombytes_openssl (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                      n1: 8192 0x49ABB3F: PQCLEAN_MCELIECE348864_AVX2_crypto_kem_keypair (in /home/anss/random/bench/v2/install-016/lib/liboqs.so.0.16.0)
+                       n0: 8192 0x1091CC: main (in /home/anss/random/bench/v2/mem/mem_kem)
+    n0: 0 in 3 places, all below massif's threshold (1.00%)
+   n0: 0 in 2 places, all below massif's threshold (1.00%)
+  n0: 3072 in 3 places, all below massif's threshold (1.00%)
+ n1: 7123 0x62AD123: CRYPTO_strndup (in /usr/lib/x86_64-linux-gnu/libcrypto.so.3)
+  n0: 7123 in 4 places, all below massif's threshold (1.00%)
+ n0: 6492 0x10916E: main (in /home/anss/random/bench/v2/mem/mem_kem)
+#-----------
+snapshot=49
+#-----------
+time=499710503
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84528
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=505406169
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84208
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=511050984
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=84208
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=516665502
+mem_heap_B=474405
+mem_heap_extra_B=62539
+mem_stacks_B=1416
+heap_tree=empty

@@ -1,0 +1,11 @@
+date: 2026-10-12T12:01:56+01:00
+Linux big-boy 7.1.5-76070105-generic #202607241434~1787955023~24.04~38a419f SMP PREEMPT_DYNAMIC Fri A x86_64 x86_64 x86_64 GNU/Linux
+Model name:                              13th Gen Intel(R) Core(TM) i7-1355U
+CPU(s) scaling MHz:                      98%
+CPU max MHz:                             1700.0000
+CPU min MHz:                             400.0000
+governor(cpu2)=performance no_turbo=1
+cur_khz(cpu2)=1700312
+gcc-11 (Ubuntu 11.5.0-1ubuntu1~24.04.1) 11.5.0
+OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+liboqs 5a1a854 (0.16.0) and f986aea (0.15.0); official HQC 161cd4f; oqs-provider 7e9d095 (0.12.0)

@@ -1,0 +1,10 @@
+Doing 256 bits  ecdh ops for 5s: 47612 256-bits ECDH ops in 5.00s
+Doing 253 bits  ecdh ops for 5s: 78396 253-bits ECDH ops in 5.00s
+version: 3.5.8-dev
+built on: Sun Jun 14 17:04:05 2026 UTC
+options: bn(64,64)
+compiler: gcc -fPIC -pthread -m64 -Wa,--noexecstack -Wall -O3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_BUILDING_OPENSSL -DNDEBUG
+CPUINFO: OPENSSL_ia32cap=0x7ffaf3ffffebffff:0x984007bc239c27eb:0x00400810fc18c410:0x0000000000040000:0x0000000000000000
+                              op      op/s
+ 256 bits ecdh (nistp256)   0.0001s   9522.4
+ 253 bits ecdh (X25519)   0.0001s  15679.2

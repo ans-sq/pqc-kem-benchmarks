@@ -1,0 +1,11 @@
+governor(cpu2)=performance epp(cpu2)=performance no_turbo=1
+/sys/class/powercap/intel-rapl:0/ energy_uj mode 404
+/sys/class/powercap/intel-rapl:0:0/ energy_uj mode 404
+/sys/class/powercap/intel-rapl:0:0/ energy_uj mode 404
+/sys/class/powercap/intel-rapl:0:1/ energy_uj mode 404
+/sys/class/powercap/intel-rapl:0:1/ energy_uj mode 404
+/sys/class/powercap/intel-rapl:1/ energy_uj mode 404
+cpu0 state2 disable=1 cpu0 state3 disable=1 
+cpu1 state2 disable=1 cpu1 state3 disable=1 
+cpu2 state2 disable=1 cpu2 state3 disable=1 
+cpu3 state2 disable=1 cpu3 state3 disable=1 

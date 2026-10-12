@@ -1,0 +1,4 @@
+# minimal config for the OpenSSL 3.5 CLI (providers are loaded explicitly)
+[req]
+distinguished_name = dn
+[dn]

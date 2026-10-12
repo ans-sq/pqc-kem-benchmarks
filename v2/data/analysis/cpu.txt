@@ -1,0 +1,53 @@
+frequency over all timed operations: min 1620654 max 1700170 kHz; max deviation from 1.7 GHz 4.67%; share within 1%: 96.1%
+repetitions per configuration: [3]
+
+== Primary table (liboqs 0.16.0 as released unless noted), median of repetition medians (us) [max between-rep spread %]
+  016    liboqs         ML-KEM-512                         15.2 [ 0.2]          17.2 [ 6.6]          20.1 [ 5.4]
+  016    liboqs         ML-KEM-768                         24.6 [ 0.1]          26.0 [ 4.4]          31.1 [ 3.5]
+  016    liboqs         ML-KEM-1024                        33.6 [ 0.1]          36.2 [ 3.1]          43.7 [ 2.5]
+  016    liboqs         NTRU-HPS-2048-677                 118.6 [ 0.1]          16.6 [ 0.2]          24.5 [ 0.0]
+  016    liboqs         NTRU-HRSS-701                     117.7 [ 1.3]          13.2 [ 0.4]          26.2 [ 0.1]
+  016    liboqs         NTRU-HPS-4096-821                 163.9 [ 0.0]          18.3 [ 0.1]          32.2 [ 1.1]
+  016    liboqs         sntrup761                        9901.0 [ 0.3]         177.2 [ 0.1]         357.9 [ 0.0]
+  016    liboqs         HQC-1                            2522.9 [ 0.1]        5051.1 [ 0.1]        7725.4 [ 0.1]
+  016    liboqs         HQC-3                            7672.2 [ 0.1]       15325.5 [ 0.1]       23173.8 [ 0.1]
+  016    liboqs         HQC-5                           18554.3 [ 0.1]       37079.5 [ 0.5]       56009.2 [ 0.1]
+  016    official-avx2  HQC-1                              40.9 [ 0.3]          78.3 [ 0.3]         186.8 [ 0.1]
+  016    official-avx2  HQC-3                             101.9 [ 0.2]         189.8 [ 0.6]         395.5 [ 0.2]
+  016    official-avx2  HQC-5                             210.7 [ 0.1]         390.4 [ 0.5]         778.1 [ 0.1]
+  016    liboqs         Classic-McEliece-348864         70019.2 [ 0.1]          24.2 [ 5.0]         274.1 [ 0.0]
+  016    liboqs         Classic-McEliece-460896        190244.6 [13.3]          51.9 [ 1.2]         357.5 [ 0.0]
+  016    liboqs         Classic-McEliece-8192128       309770.9 [14.9]          93.7 [ 4.1]         380.4 [ 0.0]
+  016O3  liboqs         Classic-McEliece-348864         59341.2 [ 0.3]          20.8 [ 6.2]          58.6 [ 0.2]
+  016O3  liboqs         Classic-McEliece-460896        183275.3 [ 0.2]          43.5 [ 0.2]         145.4 [ 0.1]
+  016O3  liboqs         Classic-McEliece-8192128       260221.7 [ 9.5]          75.8 [ 6.1]         166.9 [ 0.1]
+  max between-repetition spread in primary table: 14.9%  median 0.2%
+
+== HQC decomposition (us)
+  cat1 keygen 0.15(-O0)    11430.7 | 0.15(-O3)     2612.2 | 0.16 ref     2522.9 | official ref     2512.3 | AVX2     40.9 || -O0 x 4.38  spec/code x 1.04  SIMD x  61.7  total x 279.3
+  cat1 encaps 0.15(-O0)    22993.2 | 0.15(-O3)     5248.7 | 0.16 ref     5051.1 | official ref     5026.3 | AVX2     78.3 || -O0 x 4.38  spec/code x 1.04  SIMD x  64.5  total x 293.6
+  cat1 decaps 0.15(-O0)    36655.6 | 0.15(-O3)     7972.9 | 0.16 ref     7725.4 | official ref     7692.8 | AVX2    186.8 || -O0 x 4.60  spec/code x 1.03  SIMD x  41.4  total x 196.2
+  cat3 keygen 0.15(-O0)    34802.2 | 0.15(-O3)     7977.6 | 0.16 ref     7672.2 | official ref     7643.8 | AVX2    101.9 || -O0 x 4.36  spec/code x 1.04  SIMD x  75.3  total x 341.4
+  cat3 encaps 0.15(-O0)    69944.3 | 0.15(-O3)    16023.9 | 0.16 ref    15325.5 | official ref    15270.4 | AVX2    189.8 || -O0 x 4.37  spec/code x 1.05  SIMD x  80.7  total x 368.5
+  cat3 decaps 0.15(-O0)   107887.2 | 0.15(-O3)    24142.9 | 0.16 ref    23173.8 | official ref    23089.4 | AVX2    395.5 || -O0 x 4.47  spec/code x 1.04  SIMD x  58.6  total x 272.8
+  cat5 keygen 0.15(-O0)    63975.6 | 0.15(-O3)    14563.6 | 0.16 ref    18554.3 | official ref    18514.8 | AVX2    210.7 || -O0 x 4.39  spec/code x 0.78  SIMD x  88.1  total x 303.6
+  cat5 encaps 0.15(-O0)   129054.6 | 0.15(-O3)    29219.6 | 0.16 ref    37079.5 | official ref    37006.6 | AVX2    390.4 || -O0 x 4.42  spec/code x 0.79  SIMD x  95.0  total x 330.6
+  cat5 decaps 0.15(-O0)   200485.7 | 0.15(-O3)    44145.0 | 0.16 ref    56009.2 | official ref    55937.2 | AVX2    778.1 || -O0 x 4.54  spec/code x 0.79  SIMD x  72.0  total x 257.7
+
+== Classic McEliece -O1 (released) vs -O3 (us)
+  Classic-McEliece-348864    keygen -O1      70019.2  -O3      59341.2  x 1.18
+  Classic-McEliece-348864    encaps -O1         24.2  -O3         20.8  x 1.16
+  Classic-McEliece-348864    decaps -O1        274.1  -O3         58.6  x 4.68
+  Classic-McEliece-460896    keygen -O1     190244.6  -O3     183275.3  x 1.04
+  Classic-McEliece-460896    encaps -O1         51.9  -O3         43.5  x 1.19
+  Classic-McEliece-460896    decaps -O1        357.5  -O3        145.4  x 2.46
+  Classic-McEliece-8192128   keygen -O1     309770.9  -O3     260221.7  x 1.19
+  Classic-McEliece-8192128   encaps -O1         93.7  -O3         75.8  x 1.24
+  Classic-McEliece-8192128   decaps -O1        380.4  -O3        166.9  x 2.28
+
+== Ratios vs ML-KEM-512 (category 1)
+  NTRU-HPS-2048-677      keygen x     7.8 encaps x   1.0 decaps x   1.2 online x   1.1
+  HQC-1 ref              keygen x   166.2 encaps x 293.7 decaps x 384.6 online x 342.7
+  HQC-1 AVX2             keygen x     2.7 encaps x   4.6 decaps x   9.3 online x   7.1
+  McEliece-348864 -O1    keygen x  4613.8 encaps x   1.4 decaps x  13.6 online x   8.0
+  McEliece-348864 -O3    keygen x  3910.2 encaps x   1.2 decaps x   2.9 online x   2.1

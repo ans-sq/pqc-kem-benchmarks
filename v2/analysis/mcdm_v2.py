@@ -12,7 +12,12 @@ What changed relative to bench/mcdm.py:
     rank reversal under removal of an alternative, criterion correlations,
     and weights sampled from the flat Dirichlet distribution on the simplex;
   * the static-key contradiction is resolved by a Pareto/feasibility
-    analysis instead of a single compromise score.
+    analysis instead of a single compromise score;
+  * block [9] runs the constraint-first procedure as the paper specifies it:
+    hard constraints, then Pareto dominance among the feasible families, then
+    TOPSIS recomputed on the survivors only. Blocks [1]-[7] rank all four
+    families without constraints, a diagnostic of how the measured costs
+    separate them, not the procedure's output.
 
     python3 -I mcdm_v2.py <cpu_csv_dir> > ../data/mcdm_v2.txt   (also writes mcdm_v2.json)
 """
@@ -68,6 +73,22 @@ SCEN = {  # priority points per criterion (normalized to weights); unchanged fro
     "Static-key":         [0, 9, 0, 4, 5, 8],
     "Constrained device": [8, 8, 7, 7, 7, 4],
 }
+NORMS = ("vector", "max", "minmax", "log-vector")
+# Hard constraints of the constraint-first procedure (Section 12.2)
+KEYSHARE = PK <= 65535            # TLS 1.3 KeyShareEntry length field
+TIGHT_CT = CT <= 767              # ciphertext-only budget 96 <= B < 768 (McEliece fits every such B)
+ZERO_DFR = np.array([False, True, False, True])  # perfectly correct: NTRU, Classic McEliece
+ALL = np.ones(4, bool)
+PROCEDURE = [  # (scenario, priority points or None for entropy weights, feasibility mask)
+    ("Global (no constraint)", None, ALL),
+    ("Ephemeral TLS", SCEN["Ephemeral TLS"], KEYSHARE),
+    ("Static key, no binding budget", SCEN["Static-key"], ALL),
+    ("Static key, ciphertext budget below 768 B", SCEN["Static-key"], TIGHT_CT),
+    ("Constrained device", SCEN["Constrained device"], ALL),
+    ("Assumption diversity, ephemeral TLS", SCEN["Ephemeral TLS"], ~LATTICE & KEYSHARE),
+    ("Assumption diversity, static key", SCEN["Static-key"], ~LATTICE),
+    ("Zero decryption failures, ephemeral TLS", SCEN["Ephemeral TLS"], ZERO_DFR & KEYSHARE),
+]
 
 
 def load_cpu(d):
@@ -360,6 +381,68 @@ def main():
             s = topsis(X[sub], w, cost)
             print(f"      {sc:15s} " + "  ".join(f"{FAM[i]}={v:.3f}" for i, v in zip(sub, s)))
             res.setdefault("nonlattice", {})[sc] = {FAM[i]: float(v) for i, v in zip(sub, s)}
+
+        # 9. the constraint-first procedure as specified: hard constraints,
+        # then Pareto dominance among the feasible families on the scenario's
+        # criteria, then TOPSIS recomputed on the survivors only (normalization,
+        # ideal points and, for the global index, entropy weights re-derived
+        # on the survivors). Blocks [1]-[7] rank all four families without
+        # constraints and are a diagnostic of how the costs separate them.
+        print("\n  [9] Constraint-first procedure: feasibility -> dominance -> TOPSIS on the survivors")
+        proc = {}
+        for lab, pri, feas in PROCEDURE:
+            rng = np.random.default_rng(20260615)
+            fidx = [i for i in range(4) if feas[i]]
+            keep = list(range(6)) if pri is None else [i for i in range(6) if pri[i] > 0]
+            rec = dict(feasible=[FAM[i] for i in fidx], survivors={}, leaders={}, scores={})
+            Wd = rng.dirichlet(np.ones(len(keep)), 20000)
+            for ie, im in IM_ENC.items():
+                for me, mc in MC_ENC.items():
+                    Xa, ca, _ = matrix(kg, on, im, mc)
+                    Xk = Xa[np.ix_(fidx, keep)]
+                    surv = [fidx[i] for i in pareto(Xk, ca[keep])]
+                    enc = f"impl={ie} | math={me}"
+                    rec["survivors"][enc] = [FAM[i] for i in surv]
+                    if len(surv) < 2:
+                        for how in NORMS:
+                            rec["leaders"][f"{enc} | {how}"] = FAM[surv[0]] if surv else None
+                        continue
+                    Xs = Xa[surv]
+                    w = entropy_w(Xs) if pri is None else np.array(pri, float) / sum(pri)
+                    for how in NORMS:
+                        s = topsis(Xs, w, ca, how)
+                        rec["leaders"][f"{enc} | {how}"] = FAM[surv[int(np.argmax(s))]]
+                        rec["scores"][f"{enc} | {how}"] = {FAM[i]: round(float(v), 4) for i, v in zip(surv, s)}
+                    if enc == "impl=indicators, strict | math=indicators":
+                        s = topsis(Xs, w, ca)
+                        flips = 0
+                        for j in range(6):
+                            if w[j] == 0:
+                                continue
+                            for f in (0.75, 1.25):
+                                wp = w.copy(); wp[j] *= f; wp /= wp.sum()
+                                flips += int(np.argmax(topsis(Xs, wp, ca)) != np.argmax(s))
+                        Xd, cd = Xs[:, keep], ca[keep]
+                        wins = np.bincount([int(np.argmax(topsis(Xd, wd, cd))) for wd in Wd], minlength=len(surv))
+                        rec["weights"] = np.round(w, 3).tolist()
+                        rec["pm25_flips"] = flips
+                        rec["dirichlet_share"] = {FAM[i]: round(float(v) / len(Wd), 4) for i, v in zip(surv, wins)}
+            cnt = {}
+            for v in rec["leaders"].values():
+                cnt[v] = cnt.get(v, 0) + 1
+            rec["leader_counts"] = cnt
+            proc[lab] = rec
+            sv = sorted({tuple(v) for v in rec["survivors"].values()})
+            print(f"    {lab:45s} feasible={rec['feasible']}  survivors={[list(x) for x in sv]}  "
+                  f"leader counts over {len(rec['leaders'])} encoding x normalization variants: {cnt}")
+            if "weights" in rec:
+                ref = {k.rsplit(' | ', 1)[1]: v for k, v in rec["scores"].items()
+                       if k.startswith("impl=indicators, strict | math=indicators")}
+                print(f"      weights={rec['weights']}  +-25% leader flips={rec['pm25_flips']}  "
+                      f"Dirichlet leader share={rec['dirichlet_share']}")
+                for how, sc in ref.items():
+                    print(f"      [indicator encodings] {how:10s} {sc}")
+        res["procedure"] = proc
 
     json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "mcdm_v2.json"), "w"),
               indent=1, default=str)

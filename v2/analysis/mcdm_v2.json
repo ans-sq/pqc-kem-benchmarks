@@ -1337,6 +1337,844 @@
     "HQC": 0.0,
     "McEliece": 1.0
    }
+  },
+  "procedure": {
+   "Global (no constraint)": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | max": "ML-KEM",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | max": "ML-KEM",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.7634,
+      "McEliece": 0.2366
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.762,
+      "McEliece": 0.238
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.7382,
+      "McEliece": 0.2618
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.8666,
+      "McEliece": 0.1334
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "ML-KEM": 0.7634,
+      "McEliece": 0.2366
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "ML-KEM": 0.7621,
+      "McEliece": 0.2379
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "ML-KEM": 0.7385,
+      "McEliece": 0.2615
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "ML-KEM": 0.8667,
+      "McEliece": 0.1333
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.7634,
+      "McEliece": 0.2366
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.762,
+      "McEliece": 0.238
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.7382,
+      "McEliece": 0.2618
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.8666,
+      "McEliece": 0.1334
+     },
+     "impl=indicators, strict | math=indicators | vector": {
+      "ML-KEM": 0.7634,
+      "McEliece": 0.2366
+     },
+     "impl=indicators, strict | math=indicators | max": {
+      "ML-KEM": 0.7621,
+      "McEliece": 0.2379
+     },
+     "impl=indicators, strict | math=indicators | minmax": {
+      "ML-KEM": 0.7385,
+      "McEliece": 0.2615
+     },
+     "impl=indicators, strict | math=indicators | log-vector": {
+      "ML-KEM": 0.8667,
+      "McEliece": 0.1333
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.7634,
+      "McEliece": 0.2366
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.762,
+      "McEliece": 0.238
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.7382,
+      "McEliece": 0.2618
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.8666,
+      "McEliece": 0.1334
+     },
+     "impl=indicators, family | math=indicators | vector": {
+      "ML-KEM": 0.7634,
+      "McEliece": 0.2366
+     },
+     "impl=indicators, family | math=indicators | max": {
+      "ML-KEM": 0.7621,
+      "McEliece": 0.2379
+     },
+     "impl=indicators, family | math=indicators | minmax": {
+      "ML-KEM": 0.7385,
+      "McEliece": 0.2615
+     },
+     "impl=indicators, family | math=indicators | log-vector": {
+      "ML-KEM": 0.8667,
+      "McEliece": 0.1333
+     }
+    },
+    "weights": [
+     0.349,
+     0.179,
+     0.359,
+     0.035,
+     0.049,
+     0.029
+    ],
+    "pm25_flips": 0,
+    "dirichlet_share": {
+     "ML-KEM": 0.8415,
+     "McEliece": 0.1585
+    },
+    "leader_counts": {
+     "ML-KEM": 24
+    }
+   },
+   "Ephemeral TLS": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | max": "ML-KEM",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | max": "ML-KEM",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {},
+    "leader_counts": {
+     "ML-KEM": 24
+    }
+   },
+   "Static key, no binding budget": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | max": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "McEliece",
+     "impl=indicators, strict | math=indicators | max": "McEliece",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "McEliece",
+     "impl=indicators, family | math=indicators | max": "McEliece",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.2995,
+      "McEliece": 0.7005
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.3138,
+      "McEliece": 0.6862
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.3472,
+      "McEliece": 0.6528
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.5182,
+      "McEliece": 0.4818
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "ML-KEM": 0.3866,
+      "McEliece": 0.6134
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "ML-KEM": 0.4082,
+      "McEliece": 0.5918
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "ML-KEM": 0.5324,
+      "McEliece": 0.4676
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "ML-KEM": 0.6629,
+      "McEliece": 0.3371
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.2995,
+      "McEliece": 0.7005
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.3138,
+      "McEliece": 0.6862
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.3472,
+      "McEliece": 0.6528
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.5182,
+      "McEliece": 0.4818
+     },
+     "impl=indicators, strict | math=indicators | vector": {
+      "ML-KEM": 0.3866,
+      "McEliece": 0.6134
+     },
+     "impl=indicators, strict | math=indicators | max": {
+      "ML-KEM": 0.4082,
+      "McEliece": 0.5918
+     },
+     "impl=indicators, strict | math=indicators | minmax": {
+      "ML-KEM": 0.5324,
+      "McEliece": 0.4676
+     },
+     "impl=indicators, strict | math=indicators | log-vector": {
+      "ML-KEM": 0.6629,
+      "McEliece": 0.3371
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.2995,
+      "McEliece": 0.7005
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.3138,
+      "McEliece": 0.6862
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.3472,
+      "McEliece": 0.6528
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.5182,
+      "McEliece": 0.4818
+     },
+     "impl=indicators, family | math=indicators | vector": {
+      "ML-KEM": 0.3866,
+      "McEliece": 0.6134
+     },
+     "impl=indicators, family | math=indicators | max": {
+      "ML-KEM": 0.4082,
+      "McEliece": 0.5918
+     },
+     "impl=indicators, family | math=indicators | minmax": {
+      "ML-KEM": 0.5324,
+      "McEliece": 0.4676
+     },
+     "impl=indicators, family | math=indicators | log-vector": {
+      "ML-KEM": 0.6629,
+      "McEliece": 0.3371
+     }
+    },
+    "weights": [
+     0.0,
+     0.346,
+     0.0,
+     0.154,
+     0.192,
+     0.308
+    ],
+    "pm25_flips": 0,
+    "dirichlet_share": {
+     "ML-KEM": 0.634,
+     "McEliece": 0.366
+    },
+    "leader_counts": {
+     "McEliece": 15,
+     "ML-KEM": 9
+    }
+   },
+   "Static key, ciphertext budget below 768 B": {
+    "feasible": [
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | max": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, strict | math=indicators | vector": "McEliece",
+     "impl=indicators, strict | math=indicators | max": "McEliece",
+     "impl=indicators, strict | math=indicators | minmax": "McEliece",
+     "impl=indicators, strict | math=indicators | log-vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, family | math=indicators | vector": "McEliece",
+     "impl=indicators, family | math=indicators | max": "McEliece",
+     "impl=indicators, family | math=indicators | minmax": "McEliece",
+     "impl=indicators, family | math=indicators | log-vector": "McEliece"
+    },
+    "scores": {},
+    "leader_counts": {
+     "McEliece": 24
+    }
+   },
+   "Constrained device": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | max": "ML-KEM",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | max": "ML-KEM",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.6284,
+      "McEliece": 0.3716
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.6301,
+      "McEliece": 0.3699
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.6189,
+      "McEliece": 0.3811
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.7714,
+      "McEliece": 0.2286
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "ML-KEM": 0.632,
+      "McEliece": 0.368
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "ML-KEM": 0.6348,
+      "McEliece": 0.3652
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "ML-KEM": 0.6532,
+      "McEliece": 0.3468
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "ML-KEM": 0.784,
+      "McEliece": 0.216
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.6284,
+      "McEliece": 0.3716
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.6301,
+      "McEliece": 0.3699
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.6189,
+      "McEliece": 0.3811
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.7714,
+      "McEliece": 0.2286
+     },
+     "impl=indicators, strict | math=indicators | vector": {
+      "ML-KEM": 0.632,
+      "McEliece": 0.368
+     },
+     "impl=indicators, strict | math=indicators | max": {
+      "ML-KEM": 0.6348,
+      "McEliece": 0.3652
+     },
+     "impl=indicators, strict | math=indicators | minmax": {
+      "ML-KEM": 0.6532,
+      "McEliece": 0.3468
+     },
+     "impl=indicators, strict | math=indicators | log-vector": {
+      "ML-KEM": 0.784,
+      "McEliece": 0.216
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.6284,
+      "McEliece": 0.3716
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.6301,
+      "McEliece": 0.3699
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.6189,
+      "McEliece": 0.3811
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.7714,
+      "McEliece": 0.2286
+     },
+     "impl=indicators, family | math=indicators | vector": {
+      "ML-KEM": 0.632,
+      "McEliece": 0.368
+     },
+     "impl=indicators, family | math=indicators | max": {
+      "ML-KEM": 0.6348,
+      "McEliece": 0.3652
+     },
+     "impl=indicators, family | math=indicators | minmax": {
+      "ML-KEM": 0.6532,
+      "McEliece": 0.3468
+     },
+     "impl=indicators, family | math=indicators | log-vector": {
+      "ML-KEM": 0.784,
+      "McEliece": 0.216
+     }
+    },
+    "weights": [
+     0.195,
+     0.195,
+     0.171,
+     0.171,
+     0.171,
+     0.098
+    ],
+    "pm25_flips": 0,
+    "dirichlet_share": {
+     "ML-KEM": 0.8415,
+     "McEliece": 0.1585
+    },
+    "leader_counts": {
+     "ML-KEM": 24
+    }
+   },
+   "Assumption diversity, ephemeral TLS": {
+    "feasible": [
+     "HQC"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "HQC"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "HQC"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "HQC"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "HQC"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "HQC"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "HQC"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "HQC",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "HQC",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "HQC",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | vector": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | max": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "HQC",
+     "impl=indicators, strict | math=indicators | vector": "HQC",
+     "impl=indicators, strict | math=indicators | max": "HQC",
+     "impl=indicators, strict | math=indicators | minmax": "HQC",
+     "impl=indicators, strict | math=indicators | log-vector": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "HQC",
+     "impl=indicators, family | math=indicators | vector": "HQC",
+     "impl=indicators, family | math=indicators | max": "HQC",
+     "impl=indicators, family | math=indicators | minmax": "HQC",
+     "impl=indicators, family | math=indicators | log-vector": "HQC"
+    },
+    "scores": {},
+    "leader_counts": {
+     "HQC": 24
+    }
+   },
+   "Assumption diversity, static key": {
+    "feasible": [
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "HQC",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "HQC",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | max": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, strict | math=indicators | vector": "McEliece",
+     "impl=indicators, strict | math=indicators | max": "McEliece",
+     "impl=indicators, strict | math=indicators | minmax": "McEliece",
+     "impl=indicators, strict | math=indicators | log-vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, family | math=indicators | vector": "McEliece",
+     "impl=indicators, family | math=indicators | max": "McEliece",
+     "impl=indicators, family | math=indicators | minmax": "McEliece",
+     "impl=indicators, family | math=indicators | log-vector": "McEliece"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "HQC": 0.1299,
+      "McEliece": 0.8701
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "HQC": 0.1509,
+      "McEliece": 0.8491
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "HQC": 0.2827,
+      "McEliece": 0.7173
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "HQC": 0.2633,
+      "McEliece": 0.7367
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "HQC": 0.131,
+      "McEliece": 0.869
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "HQC": 0.1528,
+      "McEliece": 0.8472
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "HQC": 0.3367,
+      "McEliece": 0.6633
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "HQC": 0.2741,
+      "McEliece": 0.7259
+     }
+    },
+    "leader_counts": {
+     "McEliece": 24
+    }
+   },
+   "Zero decryption failures, ephemeral TLS": {
+    "feasible": [
+     "NTRU"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "NTRU"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "NTRU"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "NTRU"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "NTRU"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "NTRU"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "NTRU"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "NTRU",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "NTRU",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "NTRU",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | vector": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | max": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "NTRU",
+     "impl=indicators, strict | math=indicators | vector": "NTRU",
+     "impl=indicators, strict | math=indicators | max": "NTRU",
+     "impl=indicators, strict | math=indicators | minmax": "NTRU",
+     "impl=indicators, strict | math=indicators | log-vector": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "NTRU",
+     "impl=indicators, family | math=indicators | vector": "NTRU",
+     "impl=indicators, family | math=indicators | max": "NTRU",
+     "impl=indicators, family | math=indicators | minmax": "NTRU",
+     "impl=indicators, family | math=indicators | log-vector": "NTRU"
+    },
+    "scores": {},
+    "leader_counts": {
+     "NTRU": 24
+    }
+   }
   }
  },
  "liboqs 0.16.0 as released": {
@@ -2586,6 +3424,844 @@
    "Static-key": {
     "HQC": 0.0,
     "McEliece": 1.0
+   }
+  },
+  "procedure": {
+   "Global (no constraint)": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | max": "ML-KEM",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | max": "ML-KEM",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.7715,
+      "McEliece": 0.2285
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.7703,
+      "McEliece": 0.2297
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.7491,
+      "McEliece": 0.2509
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.869,
+      "McEliece": 0.131
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "ML-KEM": 0.7716,
+      "McEliece": 0.2284
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "ML-KEM": 0.7704,
+      "McEliece": 0.2296
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "ML-KEM": 0.7494,
+      "McEliece": 0.2506
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "ML-KEM": 0.8692,
+      "McEliece": 0.1308
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.7715,
+      "McEliece": 0.2285
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.7703,
+      "McEliece": 0.2297
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.7491,
+      "McEliece": 0.2509
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.869,
+      "McEliece": 0.131
+     },
+     "impl=indicators, strict | math=indicators | vector": {
+      "ML-KEM": 0.7716,
+      "McEliece": 0.2284
+     },
+     "impl=indicators, strict | math=indicators | max": {
+      "ML-KEM": 0.7704,
+      "McEliece": 0.2296
+     },
+     "impl=indicators, strict | math=indicators | minmax": {
+      "ML-KEM": 0.7494,
+      "McEliece": 0.2506
+     },
+     "impl=indicators, strict | math=indicators | log-vector": {
+      "ML-KEM": 0.8692,
+      "McEliece": 0.1308
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.7715,
+      "McEliece": 0.2285
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.7703,
+      "McEliece": 0.2297
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.7491,
+      "McEliece": 0.2509
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.869,
+      "McEliece": 0.131
+     },
+     "impl=indicators, family | math=indicators | vector": {
+      "ML-KEM": 0.7716,
+      "McEliece": 0.2284
+     },
+     "impl=indicators, family | math=indicators | max": {
+      "ML-KEM": 0.7704,
+      "McEliece": 0.2296
+     },
+     "impl=indicators, family | math=indicators | minmax": {
+      "ML-KEM": 0.7494,
+      "McEliece": 0.2506
+     },
+     "impl=indicators, family | math=indicators | log-vector": {
+      "ML-KEM": 0.8692,
+      "McEliece": 0.1308
+     }
+    },
+    "weights": [
+     0.305,
+     0.156,
+     0.314,
+     0.156,
+     0.043,
+     0.026
+    ],
+    "pm25_flips": 0,
+    "dirichlet_share": {
+     "ML-KEM": 0.8655,
+     "McEliece": 0.1346
+    },
+    "leader_counts": {
+     "ML-KEM": 24
+    }
+   },
+   "Ephemeral TLS": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | max": "ML-KEM",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | max": "ML-KEM",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {},
+    "leader_counts": {
+     "ML-KEM": 24
+    }
+   },
+   "Static key, no binding budget": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | max": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "McEliece",
+     "impl=indicators, strict | math=indicators | max": "McEliece",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "McEliece",
+     "impl=indicators, family | math=indicators | max": "McEliece",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.36,
+      "McEliece": 0.64
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.3645,
+      "McEliece": 0.6355
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.3472,
+      "McEliece": 0.6528
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.536,
+      "McEliece": 0.464
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "ML-KEM": 0.4223,
+      "McEliece": 0.5777
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "ML-KEM": 0.4366,
+      "McEliece": 0.5634
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "ML-KEM": 0.5324,
+      "McEliece": 0.4676
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "ML-KEM": 0.6693,
+      "McEliece": 0.3307
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.36,
+      "McEliece": 0.64
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.3645,
+      "McEliece": 0.6355
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.3472,
+      "McEliece": 0.6528
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.536,
+      "McEliece": 0.464
+     },
+     "impl=indicators, strict | math=indicators | vector": {
+      "ML-KEM": 0.4223,
+      "McEliece": 0.5777
+     },
+     "impl=indicators, strict | math=indicators | max": {
+      "ML-KEM": 0.4366,
+      "McEliece": 0.5634
+     },
+     "impl=indicators, strict | math=indicators | minmax": {
+      "ML-KEM": 0.5324,
+      "McEliece": 0.4676
+     },
+     "impl=indicators, strict | math=indicators | log-vector": {
+      "ML-KEM": 0.6693,
+      "McEliece": 0.3307
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.36,
+      "McEliece": 0.64
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.3645,
+      "McEliece": 0.6355
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.3472,
+      "McEliece": 0.6528
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.536,
+      "McEliece": 0.464
+     },
+     "impl=indicators, family | math=indicators | vector": {
+      "ML-KEM": 0.4223,
+      "McEliece": 0.5777
+     },
+     "impl=indicators, family | math=indicators | max": {
+      "ML-KEM": 0.4366,
+      "McEliece": 0.5634
+     },
+     "impl=indicators, family | math=indicators | minmax": {
+      "ML-KEM": 0.5324,
+      "McEliece": 0.4676
+     },
+     "impl=indicators, family | math=indicators | log-vector": {
+      "ML-KEM": 0.6693,
+      "McEliece": 0.3307
+     }
+    },
+    "weights": [
+     0.0,
+     0.346,
+     0.0,
+     0.154,
+     0.192,
+     0.308
+    ],
+    "pm25_flips": 0,
+    "dirichlet_share": {
+     "ML-KEM": 0.7015,
+     "McEliece": 0.2985
+    },
+    "leader_counts": {
+     "McEliece": 15,
+     "ML-KEM": 9
+    }
+   },
+   "Static key, ciphertext budget below 768 B": {
+    "feasible": [
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | max": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, strict | math=indicators | vector": "McEliece",
+     "impl=indicators, strict | math=indicators | max": "McEliece",
+     "impl=indicators, strict | math=indicators | minmax": "McEliece",
+     "impl=indicators, strict | math=indicators | log-vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, family | math=indicators | vector": "McEliece",
+     "impl=indicators, family | math=indicators | max": "McEliece",
+     "impl=indicators, family | math=indicators | minmax": "McEliece",
+     "impl=indicators, family | math=indicators | log-vector": "McEliece"
+    },
+    "scores": {},
+    "leader_counts": {
+     "McEliece": 24
+    }
+   },
+   "Constrained device": {
+    "feasible": [
+     "ML-KEM",
+     "NTRU",
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "ML-KEM",
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "ML-KEM",
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | vector": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | max": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "ML-KEM",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | vector": "ML-KEM",
+     "impl=indicators, strict | math=indicators | max": "ML-KEM",
+     "impl=indicators, strict | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, strict | math=indicators | log-vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "ML-KEM",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | vector": "ML-KEM",
+     "impl=indicators, family | math=indicators | max": "ML-KEM",
+     "impl=indicators, family | math=indicators | minmax": "ML-KEM",
+     "impl=indicators, family | math=indicators | log-vector": "ML-KEM"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.6479,
+      "McEliece": 0.3521
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.6477,
+      "McEliece": 0.3523
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.6189,
+      "McEliece": 0.3811
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.7779,
+      "McEliece": 0.2221
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "ML-KEM": 0.651,
+      "McEliece": 0.349
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "ML-KEM": 0.6518,
+      "McEliece": 0.3482
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "ML-KEM": 0.6532,
+      "McEliece": 0.3468
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "ML-KEM": 0.7899,
+      "McEliece": 0.2101
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.6479,
+      "McEliece": 0.3521
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.6477,
+      "McEliece": 0.3523
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.6189,
+      "McEliece": 0.3811
+     },
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.7779,
+      "McEliece": 0.2221
+     },
+     "impl=indicators, strict | math=indicators | vector": {
+      "ML-KEM": 0.651,
+      "McEliece": 0.349
+     },
+     "impl=indicators, strict | math=indicators | max": {
+      "ML-KEM": 0.6518,
+      "McEliece": 0.3482
+     },
+     "impl=indicators, strict | math=indicators | minmax": {
+      "ML-KEM": 0.6532,
+      "McEliece": 0.3468
+     },
+     "impl=indicators, strict | math=indicators | log-vector": {
+      "ML-KEM": 0.7899,
+      "McEliece": 0.2101
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | vector": {
+      "ML-KEM": 0.6479,
+      "McEliece": 0.3521
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | max": {
+      "ML-KEM": 0.6477,
+      "McEliece": 0.3523
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": {
+      "ML-KEM": 0.6189,
+      "McEliece": 0.3811
+     },
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": {
+      "ML-KEM": 0.7779,
+      "McEliece": 0.2221
+     },
+     "impl=indicators, family | math=indicators | vector": {
+      "ML-KEM": 0.651,
+      "McEliece": 0.349
+     },
+     "impl=indicators, family | math=indicators | max": {
+      "ML-KEM": 0.6518,
+      "McEliece": 0.3482
+     },
+     "impl=indicators, family | math=indicators | minmax": {
+      "ML-KEM": 0.6532,
+      "McEliece": 0.3468
+     },
+     "impl=indicators, family | math=indicators | log-vector": {
+      "ML-KEM": 0.7899,
+      "McEliece": 0.2101
+     }
+    },
+    "weights": [
+     0.195,
+     0.195,
+     0.171,
+     0.171,
+     0.171,
+     0.098
+    ],
+    "pm25_flips": 0,
+    "dirichlet_share": {
+     "ML-KEM": 0.8655,
+     "McEliece": 0.1346
+    },
+    "leader_counts": {
+     "ML-KEM": 24
+    }
+   },
+   "Assumption diversity, ephemeral TLS": {
+    "feasible": [
+     "HQC"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "HQC"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "HQC"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "HQC"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "HQC"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "HQC"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "HQC"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "HQC",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "HQC",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "HQC",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | vector": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | max": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "HQC",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "HQC",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "HQC",
+     "impl=indicators, strict | math=indicators | vector": "HQC",
+     "impl=indicators, strict | math=indicators | max": "HQC",
+     "impl=indicators, strict | math=indicators | minmax": "HQC",
+     "impl=indicators, strict | math=indicators | log-vector": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "HQC",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "HQC",
+     "impl=indicators, family | math=indicators | vector": "HQC",
+     "impl=indicators, family | math=indicators | max": "HQC",
+     "impl=indicators, family | math=indicators | minmax": "HQC",
+     "impl=indicators, family | math=indicators | log-vector": "HQC"
+    },
+    "scores": {},
+    "leader_counts": {
+     "HQC": 24
+    }
+   },
+   "Assumption diversity, static key": {
+    "feasible": [
+     "HQC",
+     "McEliece"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "HQC",
+      "McEliece"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "HQC",
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "McEliece"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "McEliece"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | vector": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | max": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "McEliece",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, strict | math=indicators | vector": "McEliece",
+     "impl=indicators, strict | math=indicators | max": "McEliece",
+     "impl=indicators, strict | math=indicators | minmax": "McEliece",
+     "impl=indicators, strict | math=indicators | log-vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "McEliece",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "McEliece",
+     "impl=indicators, family | math=indicators | vector": "McEliece",
+     "impl=indicators, family | math=indicators | max": "McEliece",
+     "impl=indicators, family | math=indicators | minmax": "McEliece",
+     "impl=indicators, family | math=indicators | log-vector": "McEliece"
+    },
+    "scores": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": {
+      "HQC": 0.125,
+      "McEliece": 0.875
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": {
+      "HQC": 0.1458,
+      "McEliece": 0.8542
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": {
+      "HQC": 0.2827,
+      "McEliece": 0.7173
+     },
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": {
+      "HQC": 0.2549,
+      "McEliece": 0.7451
+     },
+     "impl=expert (v1 rubric) | math=indicators | vector": {
+      "HQC": 0.1259,
+      "McEliece": 0.8741
+     },
+     "impl=expert (v1 rubric) | math=indicators | max": {
+      "HQC": 0.1475,
+      "McEliece": 0.8525
+     },
+     "impl=expert (v1 rubric) | math=indicators | minmax": {
+      "HQC": 0.3367,
+      "McEliece": 0.6633
+     },
+     "impl=expert (v1 rubric) | math=indicators | log-vector": {
+      "HQC": 0.2644,
+      "McEliece": 0.7356
+     }
+    },
+    "leader_counts": {
+     "McEliece": 24
+    }
+   },
+   "Zero decryption failures, ephemeral TLS": {
+    "feasible": [
+     "NTRU"
+    ],
+    "survivors": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric)": [
+      "NTRU"
+     ],
+     "impl=expert (v1 rubric) | math=indicators": [
+      "NTRU"
+     ],
+     "impl=indicators, strict | math=expert (v1 rubric)": [
+      "NTRU"
+     ],
+     "impl=indicators, strict | math=indicators": [
+      "NTRU"
+     ],
+     "impl=indicators, family | math=expert (v1 rubric)": [
+      "NTRU"
+     ],
+     "impl=indicators, family | math=indicators": [
+      "NTRU"
+     ]
+    },
+    "leaders": {
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | vector": "NTRU",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | max": "NTRU",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | minmax": "NTRU",
+     "impl=expert (v1 rubric) | math=expert (v1 rubric) | log-vector": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | vector": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | max": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | minmax": "NTRU",
+     "impl=expert (v1 rubric) | math=indicators | log-vector": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | vector": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | max": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | minmax": "NTRU",
+     "impl=indicators, strict | math=expert (v1 rubric) | log-vector": "NTRU",
+     "impl=indicators, strict | math=indicators | vector": "NTRU",
+     "impl=indicators, strict | math=indicators | max": "NTRU",
+     "impl=indicators, strict | math=indicators | minmax": "NTRU",
+     "impl=indicators, strict | math=indicators | log-vector": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | vector": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | max": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | minmax": "NTRU",
+     "impl=indicators, family | math=expert (v1 rubric) | log-vector": "NTRU",
+     "impl=indicators, family | math=indicators | vector": "NTRU",
+     "impl=indicators, family | math=indicators | max": "NTRU",
+     "impl=indicators, family | math=indicators | minmax": "NTRU",
+     "impl=indicators, family | math=indicators | log-vector": "NTRU"
+    },
+    "scores": {},
+    "leader_counts": {
+     "NTRU": 24
+    }
    }
   }
  }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""TLS 1.3 and QUIC handshake summaries with the pre-registered comparisons.
+"""TLS 1.3 and QUIC handshake summaries with the pre-specified comparisons.
 
     python3 -I net_stats.py tls  <tls_csv>  [baseline_group]
     python3 -I net_stats.py quic <quic_csv> [baseline_group] [pcap_summary_dir]

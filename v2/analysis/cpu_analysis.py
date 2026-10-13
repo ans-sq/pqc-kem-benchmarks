@@ -17,6 +17,9 @@ from collections import defaultdict
 import numpy as np
 
 
+NOPS = []
+
+
 def load(d):
     meds = defaultdict(list)
     khz = []
@@ -27,6 +30,7 @@ def load(d):
             c = line.strip().split(",")
             build = c[0].rsplit("_r", 1)[0]
             meds[(build, c[1], c[2], c[3])].append(float(c[5]))
+            NOPS.append(int(c[4]))
             khz += [int(c[10]), int(c[11])]
     return meds, np.array(khz)
 
@@ -90,6 +94,35 @@ def main(d):
         r = {op: m(meds, *k, op)[0] / mk[op] for op in mk}
         on = (m(meds, *k, "encaps")[0] + m(meds, *k, "decaps")[0]) / (mk["encaps"] + mk["decaps"])
         print(f"  {lab:22s} keygen x{r['keygen']:8.1f} encaps x{r['encaps']:6.1f} decaps x{r['decaps']:6.1f} online x{on:6.1f}")
+
+    # Each repetition is a separate process run, and the three repetitions
+    # were run as successive rounds over all builds; a ratio is formed within
+    # one repetition and its spread across the three repetitions reported.
+    print("\n== Stability of the headline ratios across the three repetitions (ratio per repetition [spread %])")
+    print(f"  operations timed per repetition and operation: {min(NOPS)}-{max(NOPS)} (median {int(np.median(NOPS))})")
+    rep = lambda k, r: meds[k][r]
+
+    def show(lab, f):
+        v = [f(r) for r in range(3)]
+        print(f"  {lab:40s} " + " ".join(f"{x:8.3f}" for x in v) + f"   [{100 * (max(v) / min(v) - 1):.1f}%]")
+        return 100 * (max(v) / min(v) - 1)
+    build_sp, cross_sp = [], []
+    for L, old in ((1, "HQC-128"), (3, "HQC-192"), (5, "HQC-256")):
+        for op in ("keygen", "encaps", "decaps"):
+            build_sp.append(show(f"HQC-{L} {op} -O0 / -O3 (0.15)",
+                                 lambda r: rep(("015", "liboqs", old, op), r) / rep(("015O3", "liboqs", old, op), r)))
+    for s in ("348864", "460896", "8192128"):
+        k = f"Classic-McEliece-{s}"
+        build_sp.append(show(f"McEliece-{s} decaps -O1 / -O3",
+                             lambda r: rep(("016", "liboqs", k, "decaps"), r) / rep(("016O3", "liboqs", k, "decaps"), r)))
+    online_r = lambda k, r: rep(k + ("encaps",), r) + rep(k + ("decaps",), r)
+    ml = ("016", "liboqs", "ML-KEM-512")
+    for lab, k in (("NTRU-HPS-2048-677", ("016", "liboqs", "NTRU-HPS-2048-677")),
+                   ("HQC-1 official AVX2", ("016", "official-avx2", "HQC-1")),
+                   ("McEliece-348864 -O1", ("016", "liboqs", "Classic-McEliece-348864")),
+                   ("McEliece-348864 -O3", ("016O3", "liboqs", "Classic-McEliece-348864"))):
+        cross_sp.append(show(f"{lab} online / ML-KEM-512 online", lambda r: online_r(k, r) / online_r(ml, r)))
+    print(f"  largest spread: build factors {max(build_sp):.1f}%, cross-family online ratios {max(cross_sp):.1f}%")
 
 
 if __name__ == "__main__":

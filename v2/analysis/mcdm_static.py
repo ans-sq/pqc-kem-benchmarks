@@ -6,7 +6,10 @@ both implementation choices; (2) the ciphertext-weight crossover: the
 smallest share of weight on ciphertext size (other static-key weights
 scaled proportionally) at which Classic McEliece leads; (3) the share of
 20,000 flat-Dirichlet weight vectors over the four static-key criteria in
-which each family leads.
+which each family leads. (1)-(3) rank all four families; (4) and (5)
+repeat (2) and (3) on the two families that survive the constraint-first
+procedure's dominance step (ML-KEM and Classic McEliece), which is the
+comparison the procedure actually makes.
 
     python3 -I mcdm_static.py <data_dir>
 """
@@ -63,6 +66,33 @@ def main(d):
                     wins[np.argmax(topsis(X, w, cost))] += 1
                 print(f"    impl={ie:20s} math={me:18s} " +
                       "  ".join(f"{f}={100 * v / len(W4):.1f}%" for f, v in zip(FAM, wins)))
+        surv = [FAM.index("ML-KEM"), FAM.index("McEliece")]
+        print("  [4] survivors only (ML-KEM, McEliece): ct weight share at which McEliece first leads")
+        for ie, im in IM_ENC.items():
+            for me, mc in MC_ENC.items():
+                X, cost, _ = matrix(kg, on, im, mc)
+                X = X[surv]
+                res = []
+                for how in ("vector", "max", "minmax", "log-vector"):
+                    cross = None
+                    for share in np.linspace(0.0, 1.0, 1001):
+                        rest = base.copy(); rest[1] = 0
+                        w = rest / rest.sum() * (1 - share); w[1] = share
+                        if np.argmax(topsis(X, w, cost, how)) == 1:
+                            cross = share
+                            break
+                    res.append(f"{how}:{'never' if cross is None else f'{cross:.3f}'}")
+                print(f"    impl={ie:20s} math={me:18s} " + "  ".join(res))
+        print("  [5] survivors only: flat-Dirichlet weights over the static-key criteria, leader share")
+        for ie, im in IM_ENC.items():
+            for me, mc in MC_ENC.items():
+                X, cost, _ = matrix(kg, on, im, mc, [1, 3, 4, 5])
+                X = X[surv]
+                wins = np.zeros(2, int)
+                for w in W4:
+                    wins[np.argmax(topsis(X, w, cost))] += 1
+                print(f"    impl={ie:20s} math={me:18s} ML-KEM={100 * wins[0] / len(W4):.1f}%  "
+                      f"McEliece={100 * wins[1] / len(W4):.1f}%")
 
 
 if __name__ == "__main__":

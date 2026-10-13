@@ -33,6 +33,20 @@
     impl=indicators, strict   math=indicators         ML-KEM=91.5%  NTRU=0.0%  HQC=0.0%  McEliece=8.5%
     impl=indicators, family   math=expert (v1 rubric) ML-KEM=74.9%  NTRU=0.0%  HQC=0.0%  McEliece=25.1%
     impl=indicators, family   math=indicators         ML-KEM=91.0%  NTRU=0.0%  HQC=0.0%  McEliece=9.0%
+  [4] survivors only (ML-KEM, McEliece): ct weight share at which McEliece first leads
+    impl=expert (v1 rubric)   math=expert (v1 rubric) vector:0.176  max:0.182  minmax:0.000  log-vector:0.368
+    impl=expert (v1 rubric)   math=indicators         vector:0.251  max:0.268  minmax:0.377  log-vector:0.511
+    impl=indicators, strict   math=expert (v1 rubric) vector:0.176  max:0.182  minmax:0.000  log-vector:0.368
+    impl=indicators, strict   math=indicators         vector:0.251  max:0.268  minmax:0.377  log-vector:0.511
+    impl=indicators, family   math=expert (v1 rubric) vector:0.176  max:0.182  minmax:0.000  log-vector:0.368
+    impl=indicators, family   math=indicators         vector:0.251  max:0.268  minmax:0.377  log-vector:0.511
+  [5] survivors only: flat-Dirichlet weights over the static-key criteria, leader share
+    impl=expert (v1 rubric)   math=expert (v1 rubric) ML-KEM=51.4%  McEliece=48.6%
+    impl=expert (v1 rubric)   math=indicators         ML-KEM=63.4%  McEliece=36.6%
+    impl=indicators, strict   math=expert (v1 rubric) ML-KEM=51.4%  McEliece=48.6%
+    impl=indicators, strict   math=indicators         ML-KEM=63.4%  McEliece=36.6%
+    impl=indicators, family   math=expert (v1 rubric) ML-KEM=51.4%  McEliece=48.6%
+    impl=indicators, family   math=indicators         ML-KEM=63.4%  McEliece=36.6%
 
 ######## liboqs 0.16.0 as released
   [1] leader per scenario x encoding x normalization
@@ -68,3 +82,17 @@
     impl=indicators, strict   math=indicators         ML-KEM=88.7%  NTRU=0.0%  HQC=0.0%  McEliece=11.3%
     impl=indicators, family   math=expert (v1 rubric) ML-KEM=65.0%  NTRU=0.0%  HQC=0.0%  McEliece=35.0%
     impl=indicators, family   math=indicators         ML-KEM=88.1%  NTRU=0.0%  HQC=0.0%  McEliece=11.9%
+  [4] survivors only (ML-KEM, McEliece): ct weight share at which McEliece first leads
+    impl=expert (v1 rubric)   math=expert (v1 rubric) vector:0.225  max:0.226  minmax:0.000  log-vector:0.388
+    impl=expert (v1 rubric)   math=indicators         vector:0.279  max:0.291  minmax:0.377  log-vector:0.518
+    impl=indicators, strict   math=expert (v1 rubric) vector:0.225  max:0.226  minmax:0.000  log-vector:0.388
+    impl=indicators, strict   math=indicators         vector:0.279  max:0.291  minmax:0.377  log-vector:0.518
+    impl=indicators, family   math=expert (v1 rubric) vector:0.225  max:0.226  minmax:0.000  log-vector:0.388
+    impl=indicators, family   math=indicators         vector:0.279  max:0.291  minmax:0.377  log-vector:0.518
+  [5] survivors only: flat-Dirichlet weights over the static-key criteria, leader share
+    impl=expert (v1 rubric)   math=expert (v1 rubric) ML-KEM=61.4%  McEliece=38.6%
+    impl=expert (v1 rubric)   math=indicators         ML-KEM=70.2%  McEliece=29.9%
+    impl=indicators, strict   math=expert (v1 rubric) ML-KEM=61.4%  McEliece=38.6%
+    impl=indicators, strict   math=indicators         ML-KEM=70.2%  McEliece=29.9%
+    impl=indicators, family   math=expert (v1 rubric) ML-KEM=61.4%  McEliece=38.6%
+    impl=indicators, family   math=indicators         ML-KEM=70.2%  McEliece=29.9%

@@ -35,7 +35,7 @@ xplat/          cross-platform replication on temporary cloud VMs (AMD EPYC
 mem/            peak heap + stack per exchange (valgrind massif)
 netns.py        namespace link set-up (MTU 1500, offloads off, netem)
 pcap_flights.py per-connection packet-trace summaries (TCP and QUIC)
-analysis/       statistics (pre-registered), framework (mcdm_v2.py,
+analysis/       statistics (pre-specified margin), framework (mcdm_v2.py,
                 mcdm_static.py), figures, analyze_all.sh
 data/           raw CSVs per campaign, pcap/ (headers only, xz-compressed),
                 wan/, pcapsum/ (per-connection trace summaries), analysis/
@@ -101,6 +101,16 @@ list that assumed at least 12 cores) and added `analysis/equiv_robustness.py`
 (equivalence decisions under visit resampling, and margin sensitivity) and
 two correlation tests in `analysis/mcdm_v2.py` (the correlated criteria kept
 as a single member, and CRITIC weights).
+
+Version 2.3.0 adds block [9] to `analysis/mcdm_v2.py`, which runs the
+constraint-first procedure as the paper specifies it: hard constraints,
+then Pareto dominance among the feasible families, then TOPSIS on the
+survivors only, with normalization and ideal points recomputed on them.
+Blocks [1] to [7] rank all four families without constraints and are kept
+as a diagnostic. `analysis/mcdm_static.py` adds the static-key crossover
+and sampled-weight shares on the two survivors ([4], [5]), and
+`analysis/cpu_analysis.py` reports the stability of the headline ratios
+across the three CPU repetitions.
 
 ## Licence
 

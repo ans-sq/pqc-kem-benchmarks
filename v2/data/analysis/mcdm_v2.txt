@@ -190,6 +190,31 @@
       Ephemeral TLS   HQC=0.549  McEliece=0.451
       Static-key      HQC=0.000  McEliece=1.000
 
+  [9] Constraint-first procedure: feasibility -> dominance -> TOPSIS on the survivors
+    Global (no constraint)                        feasible=['ML-KEM', 'NTRU', 'HQC', 'McEliece']  survivors=[['ML-KEM', 'McEliece']]  leader counts over 24 encoding x normalization variants: {'ML-KEM': 24}
+      weights=[0.349, 0.179, 0.359, 0.035, 0.049, 0.029]  +-25% leader flips=0  Dirichlet leader share={'ML-KEM': 0.8415, 'McEliece': 0.1585}
+      [indicator encodings] vector     {'ML-KEM': 0.7634, 'McEliece': 0.2366}
+      [indicator encodings] max        {'ML-KEM': 0.7621, 'McEliece': 0.2379}
+      [indicator encodings] minmax     {'ML-KEM': 0.7385, 'McEliece': 0.2615}
+      [indicator encodings] log-vector {'ML-KEM': 0.8667, 'McEliece': 0.1333}
+    Ephemeral TLS                                 feasible=['ML-KEM', 'NTRU', 'HQC']  survivors=[['ML-KEM']]  leader counts over 24 encoding x normalization variants: {'ML-KEM': 24}
+    Static key, no binding budget                 feasible=['ML-KEM', 'NTRU', 'HQC', 'McEliece']  survivors=[['ML-KEM', 'McEliece']]  leader counts over 24 encoding x normalization variants: {'McEliece': 15, 'ML-KEM': 9}
+      weights=[0.0, 0.346, 0.0, 0.154, 0.192, 0.308]  +-25% leader flips=0  Dirichlet leader share={'ML-KEM': 0.634, 'McEliece': 0.366}
+      [indicator encodings] vector     {'ML-KEM': 0.3866, 'McEliece': 0.6134}
+      [indicator encodings] max        {'ML-KEM': 0.4082, 'McEliece': 0.5918}
+      [indicator encodings] minmax     {'ML-KEM': 0.5324, 'McEliece': 0.4676}
+      [indicator encodings] log-vector {'ML-KEM': 0.6629, 'McEliece': 0.3371}
+    Static key, ciphertext budget below 768 B     feasible=['McEliece']  survivors=[['McEliece']]  leader counts over 24 encoding x normalization variants: {'McEliece': 24}
+    Constrained device                            feasible=['ML-KEM', 'NTRU', 'HQC', 'McEliece']  survivors=[['ML-KEM', 'McEliece']]  leader counts over 24 encoding x normalization variants: {'ML-KEM': 24}
+      weights=[0.195, 0.195, 0.171, 0.171, 0.171, 0.098]  +-25% leader flips=0  Dirichlet leader share={'ML-KEM': 0.8415, 'McEliece': 0.1585}
+      [indicator encodings] vector     {'ML-KEM': 0.632, 'McEliece': 0.368}
+      [indicator encodings] max        {'ML-KEM': 0.6348, 'McEliece': 0.3652}
+      [indicator encodings] minmax     {'ML-KEM': 0.6532, 'McEliece': 0.3468}
+      [indicator encodings] log-vector {'ML-KEM': 0.784, 'McEliece': 0.216}
+    Assumption diversity, ephemeral TLS           feasible=['HQC']  survivors=[['HQC']]  leader counts over 24 encoding x normalization variants: {'HQC': 24}
+    Assumption diversity, static key              feasible=['HQC', 'McEliece']  survivors=[['HQC', 'McEliece'], ['McEliece']]  leader counts over 24 encoding x normalization variants: {'McEliece': 24}
+    Zero decryption failures, ephemeral TLS       feasible=['NTRU']  survivors=[['NTRU']]  leader counts over 24 encoding x normalization variants: {'NTRU': 24}
+
 ######## CPU inputs: liboqs 0.16.0 as released
   keygen us [1.52000e+01 1.18600e+02 2.52290e+03 7.00192e+04]   online(enc+dec) us [   37.3    41.1 12776.5   298.4]
   raw matrix rows (pk, ct, keygen, online, impl, math):
@@ -365,3 +390,28 @@
     non-lattice filter (assumption diversity):
       Ephemeral TLS   HQC=0.517  McEliece=0.483
       Static-key      HQC=0.000  McEliece=1.000
+
+  [9] Constraint-first procedure: feasibility -> dominance -> TOPSIS on the survivors
+    Global (no constraint)                        feasible=['ML-KEM', 'NTRU', 'HQC', 'McEliece']  survivors=[['ML-KEM', 'McEliece']]  leader counts over 24 encoding x normalization variants: {'ML-KEM': 24}
+      weights=[0.305, 0.156, 0.314, 0.156, 0.043, 0.026]  +-25% leader flips=0  Dirichlet leader share={'ML-KEM': 0.8655, 'McEliece': 0.1346}
+      [indicator encodings] vector     {'ML-KEM': 0.7716, 'McEliece': 0.2284}
+      [indicator encodings] max        {'ML-KEM': 0.7704, 'McEliece': 0.2296}
+      [indicator encodings] minmax     {'ML-KEM': 0.7494, 'McEliece': 0.2506}
+      [indicator encodings] log-vector {'ML-KEM': 0.8692, 'McEliece': 0.1308}
+    Ephemeral TLS                                 feasible=['ML-KEM', 'NTRU', 'HQC']  survivors=[['ML-KEM']]  leader counts over 24 encoding x normalization variants: {'ML-KEM': 24}
+    Static key, no binding budget                 feasible=['ML-KEM', 'NTRU', 'HQC', 'McEliece']  survivors=[['ML-KEM', 'McEliece']]  leader counts over 24 encoding x normalization variants: {'McEliece': 15, 'ML-KEM': 9}
+      weights=[0.0, 0.346, 0.0, 0.154, 0.192, 0.308]  +-25% leader flips=0  Dirichlet leader share={'ML-KEM': 0.7015, 'McEliece': 0.2985}
+      [indicator encodings] vector     {'ML-KEM': 0.4223, 'McEliece': 0.5777}
+      [indicator encodings] max        {'ML-KEM': 0.4366, 'McEliece': 0.5634}
+      [indicator encodings] minmax     {'ML-KEM': 0.5324, 'McEliece': 0.4676}
+      [indicator encodings] log-vector {'ML-KEM': 0.6693, 'McEliece': 0.3307}
+    Static key, ciphertext budget below 768 B     feasible=['McEliece']  survivors=[['McEliece']]  leader counts over 24 encoding x normalization variants: {'McEliece': 24}
+    Constrained device                            feasible=['ML-KEM', 'NTRU', 'HQC', 'McEliece']  survivors=[['ML-KEM', 'McEliece']]  leader counts over 24 encoding x normalization variants: {'ML-KEM': 24}
+      weights=[0.195, 0.195, 0.171, 0.171, 0.171, 0.098]  +-25% leader flips=0  Dirichlet leader share={'ML-KEM': 0.8655, 'McEliece': 0.1346}
+      [indicator encodings] vector     {'ML-KEM': 0.651, 'McEliece': 0.349}
+      [indicator encodings] max        {'ML-KEM': 0.6518, 'McEliece': 0.3482}
+      [indicator encodings] minmax     {'ML-KEM': 0.6532, 'McEliece': 0.3468}
+      [indicator encodings] log-vector {'ML-KEM': 0.7899, 'McEliece': 0.2101}
+    Assumption diversity, ephemeral TLS           feasible=['HQC']  survivors=[['HQC']]  leader counts over 24 encoding x normalization variants: {'HQC': 24}
+    Assumption diversity, static key              feasible=['HQC', 'McEliece']  survivors=[['HQC', 'McEliece'], ['McEliece']]  leader counts over 24 encoding x normalization variants: {'McEliece': 24}
+    Zero decryption failures, ephemeral TLS       feasible=['NTRU']  survivors=[['NTRU']]  leader counts over 24 encoding x normalization variants: {'NTRU': 24}

@@ -7,7 +7,7 @@ Per region and cell: n, median handshake time with 95% bootstrap CI, the
 median in multiples of the path RTT (median TCP min_rtt of the region's
 transport run), and the median difference from x25519 with the same
 certificate chain and its 95% CI. The +/-1 ms equivalence margin was
-pre-registered for the loopback experiments only and is not applied to
+pre-specified for the loopback experiments only and is not applied to
 these paths, whose jitter is two orders of magnitude larger.
 """
 import csv
